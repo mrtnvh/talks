@@ -1,0 +1,25 @@
+<section>
+  <div class="d-flex space-between flex-end">
+    <h2>OpenAPI</h2>
+    <p>Response</p>
+  </div>
+  <pre><code data-trim class="hlyml disable-line-numbers" data-line-numbers="5-6,12|6-11|12-17">
+paths:
+  /pets:
+    get:
+      #...
+      responses:
+        '200':
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Pets"
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+</code></pre>
+</section>

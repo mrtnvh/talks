@@ -1,0 +1,31 @@
+<section>
+  <div class="d-flex space-between flex-end">
+    <h2>OpenAPI</h2>
+    <p>Component</p>
+  </div>
+  <pre><code data-trim class="hlyml disable-line-numbers" data-line-numbers="3-19|20-30">
+components:
+  schemas:
+    Pet:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+          x-custom-extension: name.firstName
+        image:
+          type: string
+        tag:
+          type: string
+      required:
+        - id
+        - name
+
+    Pets:
+      type: array
+      items:
+        $ref: "#/components/schemas/Pet"
+</code></pre>
+</section>

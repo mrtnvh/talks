@@ -1,0 +1,10 @@
+{
+  "name": "@mrtnvh/openapi-technical-openapi",
+  "version": "0.0.0",
+  "scripts": {
+    "lint": "spectral lint petstore.yml"
+  },
+  "devDependencies": {
+    "@stoplight/spectral": "^5.9.0"
+  }
+}

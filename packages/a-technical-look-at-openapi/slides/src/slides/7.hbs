@@ -1,0 +1,33 @@
+<section>
+  <div class="d-flex space-between flex-end">
+    <h2>OpenAPI</h2>
+    <p>Operation</p>
+  </div>
+  <pre><code data-trim class="hlyml disable-line-numbers" data-line-numbers="4-6,8,16,18-28|8-15,20|16-17,28">
+paths:
+  /pets:
+    get:
+      summary: List all pets
+      operationId: listPets
+      tags:
+        - pets
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time
+          required: false
+          schema:
+            type: integer
+            format: int32
+      responses:
+        #...
+
+      # description
+      # requestBody
+      # externalDocs
+      # deprecated
+      # security
+      # servers
+      # ...
+</code></pre>
+</section>
