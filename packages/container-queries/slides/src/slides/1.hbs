@@ -1,28 +1,221 @@
 <section class="centered">
   <h1 class="text-center">
-    <span class="font-size-base">mrtnvh presents</span><br>
+    <span class="font-size-base">mrtnvh presents</span><br />
     <span class="font-size-huge">
       <div class="outline">Container</div>Queries
     </span>
   </h1>
-  <div class="font-weight-black uppercase">The next step towards a truly modular CSS. </div>
+  <div class="font-weight-black uppercase">The next step towards a truly modular CSS</div>
 </section>
 
-<section class="centered">
-  
-</section>
-
-<section class="centered">
-    <div class="text-center">
-      <h1 class="mb-3">Maarten <span class="outline">Van Hoof</span></h1>
-      <div style="margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center;">
-        <a href="https://isaac.nl"><img src="/assets/images/isaac-logo-bw.svg" alt="ISAAC Software Solutions from Eindhoven, The Netherlands" style="height: 4.5rem"></a>
-        <small style="margin-left: .25rem; display: inline-block; margin-top: .55rem">(part of Intracto Group)</small>
-      </div>
-      <ul class="list--unstyled text-center">
-        <li>Senior Front end Developer</li>
-        <li>Open Source Advocate</li>
-        <li>OpenAPI Advocate</li>
+<section>
+  <div class="grid grid--two-columns">
+    <div>
+      <h3>Widgets</h3>
+      <ul>
+        <li>Gauge</li>
+        <li>Pie chart</li>
+        <li>Weather</li>
+        <li>Users</li>
       </ul>
+      <br />
+      <p class="fragment fade">All widgets are <strong>customizable</strong> by user</p>
     </div>
+    <img src="/assets/images/dashboard-a.svg" alt="Illustration of a dashboard" />
+  </div>
+</section>
+
+<section>
+  <div class="grid grid--two-columns">
+    <div>
+      <h3>Widgets</h3>
+      <ul>
+        <li>Gauge</li>
+        <li><mark>Pie chart</mark></li>
+        <li>Weather</li>
+        <li>Users</li>
+      </ul>
+      <br />
+      <p>All widgets are <strong>customizable</strong> by user</p>
+    </div>
+    <img src="/assets/images/dashboard-b.svg" alt="Illustration of a dashboard" />
+  </div>
+</section>
+
+<section>
+  <div class="grid grid--two-columns">
+    <div>
+      <h3>Widgets</h3>
+      <ul>
+        <li>Gauge</li>
+        <li>Pie chart</li>
+        <li><mark>Weather</mark></li>
+        <li>Users</li>
+      </ul>
+      <br />
+      <p>All widgets are <strong>customizable</strong> by user</p>
+    </div>
+    <img src="/assets/images/dashboard-c.svg" alt="Illustration of a dashboard" />
+  </div>
+</section>
+
+<section>
+  <div class="grid grid--two-columns">
+    <div>
+      <pre><code data-trim class="hlhtml">
+          <div class="dashboard">
+            <div class="widget widget--gauge"></div>
+            <div class="widget widget--pie"></div>
+            <div class="widget widget--weather"></div>
+            <div class="widget widget--users"></div>
+          </div>
+        </code></pre>
+
+      <pre><code data-trim class="hlcss">
+          .dashboard { /* ... */ }
+
+          .widget { /* ... */ }
+
+          .widget--gauge { /* ... */ }
+          .widget--pie { /* ... */ }
+          .widget--weather { /* ... */ }
+          .widget--users { /* ... */ }
+        </code></pre>
+
+    </div>
+    <img src="/assets/images/dashboard-a.svg" alt="Illustration of a dashboard" />
+  </div>
+</section>
+
+<section>
+  <div class="grid grid--two-columns">
+    <div>
+      <pre><code data-trim class="hlhtml disable-line-numbers" data-line-numbers="3">
+          <div class="dashboard">
+            <div class="widget widget--gauge"></div>
+            <div class="widget widget--pie widget--large"></div>
+            <div class="widget widget--weather"></div>
+            <div class="widget widget--users"></div>
+          </div>
+        </code></pre>
+
+      <pre><code data-trim class="hlcss disable-line-numbers" data-line-numbers="4,10-11">
+          .dashboard { /* ... */ }
+
+          .widget { /* ... */ }
+          .widget--large { /* ... */ }
+
+          .widget--gauge { /* ... */ }
+          .widget--weather { /* ... */ }
+          .widget--users { /* ... */ }
+          
+          .widget--pie { /* ... */ }
+          .widget--pie.widget--large { /* ... */ }
+        </code></pre>
+
+    </div>
+    <img src="/assets/images/dashboard-b.svg" alt="Illustration of a dashboard" />
+  </div>
+</section>
+
+<section>
+  <div class="grid grid--two-columns">
+    <div>
+      <pre><code data-trim class="hlhtml disable-line-numbers" data-line-numbers="4">
+          <div class="dashboard">
+            <div class="widget widget--gauge"></div>
+            <div class="widget widget--pie"></div>
+            <div class="widget widget--weather widget--large"></div>
+            <div class="widget widget--users"></div>
+          </div>
+        </code></pre>
+
+      <pre><code data-trim class="hlcss disable-line-numbers" data-line-numbers="4,12-13">
+          .dashboard { /* ... */ }
+
+          .widget { /* ... */ }
+          .widget--large { /* ... */ }
+
+          .widget--gauge { /* ... */ }
+          .widget--users { /* ... */ }
+          
+          .widget--pie { /* ... */ }
+          .widget--pie.widget--large { /* ... */ }
+
+          .widget--weather { /* ... */ }
+          .widget--weather.widget--large { /* ... */ }
+        </code></pre>
+
+    </div>
+    <img src="/assets/images/dashboard-c.svg" alt="Illustration of a dashboard" />
+  </div>
+</section>
+
+<section>
+  <h2>Reusability</h2>
+  <ul class="mb-3">
+    <li>Widgets will be part of a <strong>design system</strong>.</li>
+    <li>No knowledge,nor control of layout implementations</li>
+  </ul>
+  <strong>How to guarantee on optimal layout?</strong>
+</section>
+
+<section>
+  <h2>Reusability</h2>
+  <div class="grid grid--two-columns">
+    <div>
+      <div>
+        <pre><code data-trim class="hlhtml disable-line-numbers">
+          <!-- Application domain -->
+          <div class="dashboard">
+            <!-- Design system domain -->
+            <div class="widget widget--weather widget--large" /></div>
+          </div>
+        </code></pre>
+      </div>
+      <br>
+      <div>
+        <p class="fragment fade">Each dependant application is required to <strong>explicitly set</strong> widget variant.</p>
+        <pre class="fragment fade"><code data-trim class="hljs disable-line-numbers">
+          // 1. Application business logic to for dashboard grid layout
+          function getDashboardGrid() {}
+          
+          // 2. Application business logic for widget layout
+          function getWeatherWidgetSize() {}
+        </code></pre>
+      </div>
+    </div>
+    <img src="/assets/images/dashboard-c.svg" alt="Illustration of a dashboard" />
+  </div>
+</section>
+
+<section>
+  <h2><span class="outline">Automatic</span> reusability</h2>
+  <p class="mb-1">How can each dependant create most optimal widget layout?</p>
+  <p><strong>Media Queries?</strong></p>
+  <ul class="list--undecorated mb-1">
+    <li>🚫 Acts on viewport dimensions</li>
+    <li>🚫 No exact correlation between viewport and user preference</li>
+  </ul>
+
+  <p><strong>ReziseObserver?</strong></p>
+  <ul class="list--undecorated">
+    <li>🚫 Wait for JS</li>
+    <li>🚫 SSR = FOUC</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="outline">Automatic</span> reusability</h2>
+  <p class="mb-1">How can each dependant create most optimal widget layout?</p>
+  <p><strong>***********</strong></p>
+  <ul class="list--undecorated mb-1">
+    <li>✅ Set user preference on a container</li>
+    <li>✅ Acts on container dimensions</li>
+  </ul>
+</section>
+
+<section class="centered">
+  <h2>Good news!</h2>
+  <p>Somethings cooking.</p>
 </section>

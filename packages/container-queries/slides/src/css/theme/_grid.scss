@@ -6,7 +6,7 @@
   grid-template-columns: repeat(1, 1fr);
   justify-content: center;
   gap: ($slidePadding / 2);
-  align-items: center;
+  align-content: center;
 
   &.grid--two-columns {
     grid-template-columns: repeat(2, 1fr);
@@ -22,5 +22,9 @@
     & > *:not(:first-child) {
       border-left: 1px solid $meta;
     }
+  }
+
+  &.grid--align-top {
+    align-content: start;
   }
 }

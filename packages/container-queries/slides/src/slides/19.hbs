@@ -1,36 +1,18 @@
 <section>
   <h2 class="mb-2">TIL</h2>
   <div class="mb-2">
-    <strong>OpenAPI specification</strong>
-    <ul>
-      <li class="mb-0">Contract between services</li>
-      <li class="mb-0">Unified way of describing a REST API</li>
-    </ul>
+    <strong>Container Queries</strong>
+    <p class="mb-3">Allows any element with both size & layout containment to be queried using a new <code>@container</code> rule, with similar syntax to existing media-queries.</p>
+    <pre class="mb-3"><code data-trim class="hlcss disable-line-numbers">
+    .container {
+      contain: layout inline-size style;
+    }
+
+    @container (min-width: 100px) {
+      .child-of-container { /* ... */ }
+    }
+    </code></pre>
+    <p><strong>Draft</strong> <br>Experiment on Chrome Canary with <code>chrome://flags/#enable-container-queries</code> enabled</p>
   </div>
 
-  <div class="fragment fade mb-2">
-    <ul>
-      <li class="mb-0">Code first</li>
-      <li class="mb-0">Design first</li>
-    </ul>
-  </div>
-
-  <div class="fragment fade mb-2">
-    <strong>Tools</strong><br>
-    <ul>
-      <li class="mb-0">Documentation generation</li>
-      <li class="mb-0">SDK generation</li>
-      <li class="mb-0">Mocking servers</li>
-      <li class="mb-0">Automation</li>
-    </ul>
-  </div>
-
-  <div class="fragment fade">
-    <strong>Results</strong><br>
-    <ul>
-      <li class="mb-0 fragment">Single source of truth</li>
-      <li class="mb-0 fragment">Enhances workflow</li>
-      <li class="mb-0 fragment">Increases independence</li>
-    </ul>
-  </div>
 </section>
