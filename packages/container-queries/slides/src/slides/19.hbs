@@ -1,18 +1,32 @@
 <section>
   <h2 class="mb-2">TIL</h2>
   <div class="mb-2">
-    <strong>Container Queries</strong>
-    <p class="mb-3">Allows any element with both size & layout containment to be queried using a new <code>@container</code> rule, with similar syntax to existing media-queries.</p>
-    <pre class="mb-3"><code data-trim class="hlcss disable-line-numbers">
-    .container {
-      contain: layout inline-size style;
-    }
 
-    @container (min-width: 100px) {
-      .child-of-container { /* ... */ }
-    }
-    </code></pre>
-    <p><strong>Draft</strong> <br>Experiment on Chrome Canary with <code>chrome://flags/#enable-container-queries</code> enabled</p>
+    <p class="mb-2"><strong>Container Queries</strong>: Allows any element with both size & layout containment to be queried using a new <code>@container</code> rule, with similar syntax to existing media-queries.</p>
+    <div>
+      <div class="grid grid--two-columns">
+        <div><pre><code data-trim class="hlcss disable-line-numbers">
+        .container {
+          contain: layout inline-size style;
+        }
+        </code></pre></div>
+        <div><pre><code data-trim class="hlcss disable-line-numbers">
+        @container (min-width: 100px) {
+          .child-of-container { /* ... */ }
+        }
+        </code></pre></div>
+      </div>
+    </div>
+    
+    <p><strong>Draft</strong></p>
+    <ul style="line-height: 1;">
+      <li>Experiment on Chrome Canary with <code>chrome://flags/#enable-container-queries</code> enabled</li>
+      <li>WIP: Container queries in responsive images</li>
+      <li>WIP: matchMedia equivalent</li>
+      <li>WIP: vw / vh equivalent</li>
+      <li>...</li>
+    </ul>
+    <small><a href="https://github.com/w3c/csswg-drafts/projects/18">https://github.com/w3c/csswg-drafts/projects/18</a></small>
   </div>
 
 </section>
