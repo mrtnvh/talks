@@ -1,0 +1,10 @@
+{
+  "name": "@mrtnvh/frontend-loves-openapi-demo-mock",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "prism mock -d ../openapi/petstore.yml"
+  },
+  "devDependencies": {
+    "@stoplight/prism-cli": "^4.1.2"
+  }
+}
