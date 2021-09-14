@@ -47,6 +47,185 @@
 </section>
 
 <section>
+  <div class="d-flex space-between flex-end">
+    <h2>OpenAPI</h2>
+    <p>Document layout</p>
+  </div>
+  <pre><code data-trim class="hlyml disable-line-numbers" data-line-numbers="0|10-14">
+openapi:
+   # Specification version
+
+info:
+   # General API metadata
+
+servers:
+   # Server information. BaseURLs, environments, ...
+
+paths:
+   # Available paths & operations
+
+components:
+   # Datamodel abstraction
+
+security:
+   # Security mechanisms can be used across the API
+
+tags:
+   # Grouping of paths & components
+
+external docs:
+   # Additional external documentation
+
+webhooks:
+   # Webhook operations, similar to paths, only API is now a consumer.
+
+</code></pre>
+</section>
+
+<section>
+  <div class="d-flex space-between flex-end">
+    <h2>OpenAPI</h2>
+    <p>Paths</p>
+  </div>
+  <pre><code data-trim class="hlyml disable-line-numbers" data-line-numbers="1|3,11|4,7,12|5-6,8-11,13-15">
+paths:
+
+  /pets:
+    get:
+      summary: List all pets
+      #...
+    post:
+      summary: Create a pet
+      #...
+
+  /pets/{petId}:
+    get:
+      summary: Info for a specific pet
+      #...
+
+</code></pre>
+</section>
+
+<section>
+  <div class="d-flex space-between flex-end">
+    <h2>OpenAPI</h2>
+    <p>Operation</p>
+  </div>
+  <pre><code data-trim class="hlyml disable-line-numbers" data-line-numbers="4-6,8,16,18-28|8-15,20|16-17,28">
+paths:
+  /pets:
+    get:
+      summary: List all pets
+      operationId: listPets
+      tags:
+        - pets
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time
+          required: false
+          schema:
+            type: integer
+            format: int32
+      responses:
+        #...
+
+      # description
+      # requestBody
+      # externalDocs
+      # deprecated
+      # security
+      # servers
+      # ...
+</code></pre>
+</section>
+
+<section>
+  <div class="d-flex space-between flex-end">
+    <h2>OpenAPI</h2>
+    <p>Response</p>
+  </div>
+  <pre><code data-trim class="hlyml disable-line-numbers" data-line-numbers="5-6,12|6-11|12-17">
+paths:
+  /pets:
+    get:
+      #...
+      responses:
+        '200':
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Pets"
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+</code></pre>
+</section>
+
+<section>
+  <div class="d-flex space-between flex-end">
+    <h2>OpenAPI</h2>
+    <p>Components</p>
+  </div>
+  <pre><code data-trim class="hlyml disable-line-numbers" data-line-numbers="1|2-4|6-7|9-11|12-16">
+components:
+  schemas:
+    Pet:
+    Pets:
+
+  responses:
+    ErrorResponse:
+
+  requestBodies:
+    NewPet:
+
+  headers:
+    Limit:
+    Offset:
+    Pagination:
+
+  #...
+</code></pre>
+</section>
+
+<section>
+  <div class="d-flex space-between flex-end">
+    <h2>OpenAPI</h2>
+    <p>Component</p>
+  </div>
+  <pre><code data-trim class="hlyml disable-line-numbers" data-line-numbers="3-19|20-30">
+components:
+  schemas:
+    Pet:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+          x-custom-extension: name.firstName
+        image:
+          type: string
+        tag:
+          type: string
+      required:
+        - id
+        - name
+
+    Pets:
+      type: array
+      items:
+        $ref: "#/components/schemas/Pet"
+</code></pre>
+</section>
+
+
+<section>
   <h2>Code first</h2>
   <figure style="padding-bottom: 45%" class="image-wrapper w-full">
     <img src="/assets/images/code-first.svg"
