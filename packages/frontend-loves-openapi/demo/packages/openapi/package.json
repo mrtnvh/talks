@@ -2,7 +2,7 @@
   "name": "@mrtnvh/frontend-loves-openapi-demo-openapi",
   "version": "0.0.0",
   "scripts": {
-    "docs": " -server .",
+    "docs": "http-server .",
     "dev": "npm run docs",
     "lint": "spectral lint petstore.yml"
   },
