@@ -6,7 +6,7 @@
     "lint": "spectral lint petstore.yml"
   },
   "devDependencies": {
-    "@stoplight/spectral": "^5.9.0",
+    "@stoplight/spectral": "^5.9.2",
     "http-server": "^13.0.1"
   }
 }

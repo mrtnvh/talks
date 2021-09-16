@@ -1,0 +1,18 @@
+{
+  "extends": "spectral:oas",
+  "functions": ["kebabCasePath"],
+  "rules": {
+    "oas3-api-servers": "off",
+    "info-contact": "off",
+    "operation-description": "off",
+    "kebab-case-path": {
+      "message": "{{error}}",
+      "type": "style",
+      "given": "$.paths",
+      "then": {
+        "field": "@key",
+        "function": "kebabCasePath"
+      }
+    }
+  }
+}
