@@ -1,0 +1,12 @@
+# slidev
+dist/
+.remote-assets/
+index.html
+
+# dependencies
+pnpm-lock.yaml
+node_modules/
+
+# miscellaneous
+.DS_Store
+*.local
