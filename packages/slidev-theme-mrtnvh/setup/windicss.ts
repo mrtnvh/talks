@@ -3,12 +3,6 @@ import { defineWindiSetup } from "@slidev/types";
 
 export default defineWindiSetup(() => ({
   extract: {
-    include: [resolve(__dirname, "**/*.{vue,ts}")],
-  },
-  theme: {
-    fontFamily: {
-      sans: "'Inter', sans-serif",
-      mono: "'IBM Plex Mono', monospace",
-    },
-  },
+    include: [resolve(__dirname, "**/*.{md,vue,ts}")],
+  }
 }));

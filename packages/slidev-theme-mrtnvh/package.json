@@ -1,15 +1,6 @@
 {
-    "name": "slidev-theme-geist",
-    "version": "0.6.0",
-    "homepage": "https://github.com/nico-bachner/slidev-theme-geist#readme",
-    "bugs": {
-        "url": "https://github.com/nico-bachner/slidev-theme-geist/issues"
-    },
-    "author": {
-        "name": "Nico Bachner",
-        "email": "yo@nicob.dev",
-        "url": "https://nicob.dev/"
-    },
+    "name": "slidev-theme-mrtnvh",
+    "version": "0.1.0",
     "license": "MIT",
     "keywords": [
         "slidev-theme",
@@ -39,7 +30,8 @@
     },
     "dependencies": {
         "@slidev/cli": "^0.28.2",
-        "@slidev/theme-default": "^0.21.1"
+        "@slidev/theme-default": "^0.21.1",
+        "prism-themes": "^1.9.0"
     },
     "devDependencies": {
         "playwright-chromium": "^1.12",

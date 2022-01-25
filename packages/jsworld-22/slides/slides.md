@@ -1,326 +1,585 @@
 ---
 theme: mrtnvh
+
+layout: cover
+
+# the image source
+background: ./images/mrtnvh-jsworld-001.jpg
 ---
 
 # Container Queries
 
 The next step towards a truly modular CSS.
 
-<div class="text-xs uppercase m-t-4 text-gray-400">10 feb 2022 <span class="m-x-2">\\</span> JSWorld Conference</div>
+<div class="text-xs uppercase mt-4 text-gray-400">10 feb 2022 <span class="mx-2">\\</span> JSWorld Conference <span class="mx-2">\\</span> <a href="https://mrtnvh.com" target="_blank" rel="nofollow noopener">mrtnvh</a> </div>
+
+<!-- Photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pawel Czerwinski</a> on <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
 
 ---
-
-# What is Slidev?
-
-Slidev is a slides maker and presenter designed for developers, consist of the following features
-
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
-
-<br>
-<br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
-
+layout: blocks
 ---
 
-# Navigation
-
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
-
-### Keyboard Shortcuts
-
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
-
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+<ul>
+  <li>Reusable components?</li>
+  <li v-click>Most optimal responsive layout?</li>
+  <li v-click>Media queries \\\\ config options?</li>
+</ul>
 
 ---
 layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
+image: https://res.cloudinary.com/mrtnvh/image/upload/c_scale/dpr_1.0/f_auto/q_auto/w_2400/h_1350/e_grayscale/e_tint:100:22c55e:0p:f0fdf4:100p/t_noise/v1642454529/mrtnvh.com/mrtnvh-portrait-2021.jpg
 ---
 
-# Code
+<div class="flex flex-col items-center justify-center h-full text-center">
 
-Use code snippets and get the highlighting directly![^1]
-
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
-
-function updateUser(id: number, update: User) {
-  const user = getUser(id)
-  const newUser = {...user, ...update}  
-  saveUser(id, newUser)
-}
-```
-
-<arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
-
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
-
-<style>
-.footnotes-sep {
-  @apply mt-20 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
-
----
-
-# Components
-
-<div grid="~ cols-2 gap-4">
-<div>
-
-You can use Vue components directly inside your slides.
-
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
-
-
----
-class: px-20
----
-
-# Themes
-
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="-t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
-
----
-preload: false
----
-
-# Animations
-
-Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
-
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }">
-  Slidev
-</div>
-```
-
-<div class="w-60 relative mt-6">
-  <div class="relative w-40 h-40">
+<h1>
+  <a href="https://mrtnvh.com" target="_blank" rel="nofollow noopener">
     <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-square.png"
+      class="h-12"
+      src="/images/mrtnvh-logo.svg"
     />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-circle.png"
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-triangle.png"
-    />
-  </div>
+  </a>
+</h1>
 
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
+Developer Advocate \\\\ Senior Front-end
 
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 40, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn More](https://sli.dev/guide/animations.html#motion)
+<a href="https://iodigital.com" class="mt-6" target="_blank" rel="nofollow noopener">
+  <img
+    class="h-12"
+    src="/images/io-logo.svg"
+  />
+</a>
 
 </div>
-
----
-
-# LaTeX
-
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
-
-<br>
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$
-\begin{array}{c}
-
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
-$$
-
-<br>
-
-[Learn more](https://sli.dev/guide/syntax#latex)
-
----
-
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-3 gap-10 pt-4 -mb-6">
-
-```mermaid {scale: 0.5}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
-
-</div>
-
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
 
 
 ---
 layout: center
-class: text-center
 ---
 
-# Learn More
+<img
+  class="h-160"
+  src="/images/dashboard-1.svg"
+/>
 
-[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
+<style>
+  .center {
+    background-color: #EEEEEE;
+  }
+</style>
+
+
+---
+layout: image-right
+image: /images/dashboard-1.svg
+---
+
+# Goals
+
+As a user:
+- I should be able to customize my dashboard by resizing widgets. 
+- I want to less or more information depending on size.
+
+---
+layout: image-right
+image: /images/dashboard-2.svg
+---
+
+# Goals
+
+As a user:
+- I should be able to customize my dashboard by resizing widgets. 
+- I want to less or more information depending on size.
+
+---
+layout: image-right
+image: /images/dashboard-3.svg
+---
+
+# Goals
+
+As a user:
+- I should be able to customize my dashboard by resizing widgets. 
+- I want to less or more information depending on size.
+
+---
+layout: image-right
+image: /images/dashboard-viewport.svg
+---
+
+# Media queries?
+
+- Query the viewport
+- Insufficient flexibility
+
+---
+layout: image-right
+image: /images/dashboard-modular.svg
+---
+
+# Custom classes?
+
+```html
+<internal-dashboard>
+  <external-widget type="bar" />
+  <external-widget type="pie"/>
+  <external-widget type="weather" />
+  <external-widget type="users" />
+</internal-dashboard>
+```
+
+```css
+internal-dashboard {}
+
+external-widget {}
+
+external-widget[type="gauge"] {}
+external-widget[type="pie"] {}
+external-widget[type="weather"] {}
+external-widget[type="users"] {}
+```
+
+---
+layout: image-right
+image: /images/dashboard-modular.svg
+---
+
+# Custom classes?
+
+- End user is responsible for styling
+- Not automatically provided
+- End-user has to implement own layout logic
+
+---
+
+# ResizeObserver?
+
+```js
+const $widget = document.querySelector(".widget");
+
+const resizeObserver = new ResizeObserver((entries) => {
+  for (let entry of entries) {
+    if (entry.target.width > entry.contentBoxSize.inlineSize) {
+      entry.target.classList.add("widget--large");
+    } else {
+      entry.target.classList.remove("widget--large");
+    }
+  }
+});
+
+resizeObserver.observe($widget);
+```
+
+<div v-click class='mt-3'>
+  <carbon-warning-alt class='mr-3' /> Flash Of Unstyled Content
+</div>
+
+---
+layout: center
+---
+
+<h1 class="text-8xl">CSS</h1>
+
+---
+layout: center
+---
+
+<img
+  class="h-160"
+  src="/images/dashboard-modular.svg"
+/>
+
+<style>
+  .center {
+    background-color: #EEEEEE;
+  }
+</style>
+
+---
+layout: browser
+---
+<div v-click-hide class="browser-wrapper">
+    <div class="browser-body">
+        <iframe src="https://codepen.io/vanhoofmaarten/full/vYWYKLP" />
+    </div>
+</div>
+<div v-after class="browser-wrapper" style="width: 54%;">
+    <div class="browser-body">
+        <iframe src="https://codepen.io/vanhoofmaarten/full/vYWYKLP" />
+    </div>
+</div>
+
+---
+
+# CSS Containment
+
+- Improves rendering performance
+- DOM subtree isolation
+- Enables container queries
+
+<br>
+
+```css 
+.container {
+  contain: size layout style paint;
+}
+```
+
+---
+
+# Container Queries
+
+Enable containment for container query
+
+```css 
+.product {
+  contain: size layout style;
+}
+```
+
+---
+
+# Container Queries
+
+Enable containment for container query
+
+```css 
+.product {
+  container: product / size;
+
+  /* Shorthand for */
+  container-name: product;
+  container-type: size;
+}
+```
+
+---
+
+# Container Queries
+
+Enable containment for container query
+
+```css 
+.product {
+  /* Target specific containers*/
+  container-name: product;
+
+  /* inline-size, block-size, aspect-ratio, orientation, style, state */
+  container-type: size;
+}
+```
+
+---
+
+# Size container features
+
+Single condition
+
+```css 
+@container size(inline-size > 400px) {
+  .product-body {} 
+}
+```
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<small>
+
+  Addition of the `size` method is T.B.C. (https://github.com/w3c/csswg-drafts/issues/6393)
+
+</small>
+
+---
+
+# Size container features
+
+Multiple conditions
+
+```css 
+@container size(inline-size > 400px) and size(block-size > 200px) { 
+  .product-body {}
+}
+```
+
+---
+
+# Size container features
+
+Target multiple containers
+
+```css 
+.main {
+  container-type: size;
+  container-name: main;
+}
+
+.ancestor {
+  container-type: size;
+  container-name: ancestor;
+}
+
+@container main size(inline-size > 800px) {
+  .card {}
+}
+
+@container ancestor size(inline-size > 400px) and (block-size > 200px) {
+  .card {}
+}
+```
+
+---
+
+# Size container features
+
+<carbon-warning-alt class='mr-2' /> Containment always has to be set on an ancestor.
+
+```css 
+.ancestor {
+  container-type: size;
+}
+
+@container size(inline-size > 800px) {
+  .ancestor {
+    /* NOPE */
+  }
+}
+```
+
+---
+layout: image-right
+image: /images/dashboard-modular.svg
+---
+
+# Size container features
+
+```html
+<!-- external-widget-component -->
+<div class="widget">
+  <div class="widget-body">
+    <!-- widget-content -->
+  </div>
+</div>
+```
+
+```css
+.widget {
+  container: inline-size;
+}
+
+@container size(inline-size > 500px) {
+  .widget-body {} 
+}
+```
+
+---
+
+# Style container features
+
+```css 
+.product {
+  container-type: style;
+}
+
+@container style(background: red) {
+  .product-body {}
+}
+```
+
+---
+
+# State container features
+
+```css 
+.product {
+  container-type: state;
+  position: sticky;
+}
+
+/* This syntax does not exist yet, just making something up. */
+@container state(sticky: true) {
+  .product-body {}
+}
+```
+
+---
+
+# Container relative units
+
+<div class="flex gap-12">
+  <div class="flex-grow">
+
+```css 
+.product {
+  container-type: style;
+}
+
+@container type(inline-size) {
+  .product-grandchild {
+    height: 75cqi;
+  }
+}
+```
+
+  </div>
+  <div class="flex-grow">
+    <table class="mt-1">
+      <thead>
+        <tr>
+          <th>unit</th>
+          <th>relative to</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>cqw</td>
+          <td>1% of a query container’s width</td>
+        </tr>
+        <tr>
+          <td>cqh</td>
+          <td>1% of aquery container’s height</td>
+        </tr>
+        <tr>
+          <td>cqi</td>
+          <td>1% of a query container’s inline size</td>
+        </tr>
+        <tr>
+          <td>cqb</td>
+          <td>1% of a query container’s block size</td>
+        </tr>
+        <tr>
+          <td>cqmin</td>
+          <td>The smaller value of cqi or cqb</td>
+        </tr>
+        <tr>
+          <td>cqmax</td>
+          <td>The larger value of cqi or cqb</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+---
+
+# Experiment!
+
+- Chrome Canary: [chrome://flags/#enable-container-queries](chrome://flags/#enable-container-queries)
+- Polyfill: https://github.com/GoogleChromeLabs/container-query-polyfill
+
+<br>
+
+<carbon-warning-alt class='mr-1' /> Spec. in active development <br>
+<carbon-warning-alt class='mr-1' /> Syntax bound to change <br>
+<carbon-warning-alt class='mr-1' /> Not ready for production
+
+---
+
+# Participate!
+
+- [CSS Working Group discussions on Github](https://github.com/w3c/csswg-drafts/projects/18)
+- [Awesome Container Queries](https://github.com/sturobson/Awesome-Container-Queries) by Stu Robson
+
+---
+layout: browser
+---
+<div class="browser-wrapper">
+    <div class="browser-body">
+        <iframe src="https://codepen.io/vanhoofmaarten/full/mdWBMGb" />
+    </div>
+</div>
+
+---
+layout: browser
+---
+<div class="browser-wrapper">
+    <div class="browser-body">
+        <iframe src="https://codepen.io/vanhoofmaarten/full/WNpJoGq" />
+    </div>
+</div>
+
+---
+
+# #TIL
+
+**Container queries**
+
+- Encapsulate adaptive styles
+  - Modular front-end architecture
+- Not limited to querying size
+  - Size
+  - Style
+  - State
+  - Container Relative units
+- Specification is under active development
+  - Experiment with [Chrome Canary](chrome://flags/#enable-container-queries) or [polyfill](chrome://flags/#enable-container-queries)
+  - Not ready for production
+
+
+---
+layout: center
+---
+
+<div class="text-center">
+
+  # Share!
+
+  <mdi-twitter class='mr-1 mb-1 inline-block' /> <br/> [@mrtnvh](https://twitter.com/mrtnvh)
+
+</div>
+
+---
+layout: center
+---
+
+<div class="text-center">
+
+  <h1 class="mb-6">Credits</h1>
+
+  [Miriam Suzanne](https://www.miriamsuzanne.com/) <br>
+  [Una Kravets](https://una.im/) <br> <br>
+  Everyone championing container queries!
+
+</div>
+
+
+---
+layout: center
+---
+
+<div class="text-center text-3xl">
+  
+  Me <mdi-arrow-right class='h-8 inline-block' /> [mrtnvh.com](https://mrtnvh.com) <br>
+  Team-up <mdi-arrow-right class='h-8 inline-block' /> [iodigital.com/careers](https://iodigital.com/careers)
+
+</div>
+
+
+---
+layout: center
+---
+
+<mdi-peace class='w-24 h-24' />
+
+
+
+---
+layout: center
+---
+
+<div class="text-center">
+
+# Resources
+
+[CSSWG Specification](https://drafts.csswg.org/css-contain-3/) <br>
+[CSS Working Group discussions on Github](https://github.com/w3c/csswg-drafts/projects/18) <br>
+[MDN Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Container_Queries) <br>
+[awesome-container-queries](https://github.com/sturobson/Awesome-Container-Queries)
+
+
+</div>

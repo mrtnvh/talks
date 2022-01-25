@@ -1,6 +1,4 @@
-@import "prism-theme-vars/base.css";
-@import "codemirror-theme-vars/base.css";
-@import "prism-theme-vars/to-codemirror.css";
+@import "prism-themes/themes/prism-one-dark.css";
 
 html {
     --mrtnvh-error: #e00;
@@ -48,22 +46,6 @@ html.dark {
     --mrtnvh-background: #1c1917;
 }
 
-/* prism styles */
-:root {
-    --prism-font-family: var(--slidev-code-font-family);
-    --prism-block-radius: var(--mrtnvh-radius);
-    --prism-foreground: #e7e5e4;
-    --prism-background: #292524;
-    --prism-keyword: var(--mrtnvh-highlight-purple);
-    --prism-function: var(--mrtnvh-success);
-    --prism-number: var(--mrtnvh-success);
-    --prism-class: var(--mrtnvh-success);
-    --prism-string: var(--mrtnvh-warning);
-    --prism-builtin: var(--mrtnvh-warning);
-    --prism-property: var(--mrtnvh-warning);
-    --prism-comment: #a8a29e;
-}
-
 .slidev-code {
     --slidev-code-radius: var(--prism-block-radius);
     --slidev-code-padding: var(--mrtnvh-gap);
@@ -77,8 +59,11 @@ html.dark {
 #slide-content {
     color: var(--accents-8);
     background-color: var(--mrtnvh-background);
-    padding: 3rem;
     height: 100%;
+}
+
+.slidev-layout {
+    @apply p-16;
 }
 
 h1,
@@ -135,6 +120,7 @@ code * {
 code {
     font-family: "Fira Code", monospace;
     font-weight: 700;
+    text-shadow: none !important;
 }
 
 :not(pre) > code {
@@ -148,12 +134,17 @@ code {
     color: var(--mrtnvh-highlight-purple);
 }
 
-pre {
-  border: 1px solid #fafaf9;
+ul {
+    @apply ml-4;
 }
 
 li {
     @apply my-2;
+
+    &:before {
+        content: "-";
+        @apply text-gray-400 mr-2 -ml-4;
+    }
 }
 
 table {
