@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "@slidev/cli": "^0.28.2",
-    "slidev-theme-mrtnvh": "file:../../slidev-theme-mrtnvh"
+    "slidev-theme-mrtnvh": "0.1.0"
   },
   "name": "jsworld-22-slides",
   "devDependencies": {
