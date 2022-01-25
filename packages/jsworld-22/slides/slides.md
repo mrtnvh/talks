@@ -1,6 +1,6 @@
 ---
 theme: mrtnvh
-
+routerMode: 'hash'
 layout: cover
 
 # the image source

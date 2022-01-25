@@ -2,7 +2,7 @@
 theme: ./
 ---
 
-# Slidev Theme Geist
+# Slidev Theme mrtnvh
 
 A Vercel theme for Slidev
 
