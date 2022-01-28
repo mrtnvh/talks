@@ -1,5 +1,9 @@
 ---
 theme: ./
+fonts:
+  sans: Inter
+  weights: '400,700,800'
+  mono: "IBM Plex Mono"
 ---
 
 # Slidev Theme mrtnvh
