@@ -3,6 +3,11 @@ theme: mrtnvh
 routerMode: 'hash'
 layout: cover
 
+fonts:
+  sans: Inter
+  weights: '400,700,800'
+  mono: "IBM Plex Mono"
+
 # the image source
 background: ./images/mrtnvh-jsworld-001.jpg
 ---
@@ -59,7 +64,7 @@ layout: center
 
 <img
   class="h-160"
-  src="/images/dashboard-1.svg"
+  src="/images/dashboard-default.svg"
 />
 
 <style>
@@ -68,10 +73,36 @@ layout: center
   }
 </style>
 
+---
+layout: center
+---
+
+<img
+  class="h-160"
+  src="/images/dashboard-transparent.svg"
+/>
+
+<style>
+  .center {
+    background-color: #EEEEEE;
+  }
+</style>
 
 ---
 layout: image-right
-image: /images/dashboard-1.svg
+image: /images/dashboard-transparent.svg
+---
+
+
+# Goals
+
+As a user:
+- I should be able to customize my dashboard by resizing widgets. 
+- I want to less or more information depending on size.
+
+---
+layout: image-right
+image: /images/dashboard-weather-bigger.svg
 ---
 
 # Goals
@@ -82,29 +113,7 @@ As a user:
 
 ---
 layout: image-right
-image: /images/dashboard-2.svg
----
-
-# Goals
-
-As a user:
-- I should be able to customize my dashboard by resizing widgets. 
-- I want to less or more information depending on size.
-
----
-layout: image-right
-image: /images/dashboard-3.svg
----
-
-# Goals
-
-As a user:
-- I should be able to customize my dashboard by resizing widgets. 
-- I want to less or more information depending on size.
-
----
-layout: image-right
-image: /images/dashboard-viewport.svg
+image: /images/dashboard-global-highlight.svg
 ---
 
 # Media queries?
@@ -114,7 +123,7 @@ image: /images/dashboard-viewport.svg
 
 ---
 layout: image-right
-image: /images/dashboard-modular.svg
+image: /images/dashboard-weather-highlighted.svg
 ---
 
 # Custom classes?
@@ -141,7 +150,7 @@ external-widget[type="users"] {}
 
 ---
 layout: image-right
-image: /images/dashboard-modular.svg
+image: /images/dashboard-weather-highlighted.svg
 ---
 
 # Custom classes?
@@ -186,7 +195,7 @@ layout: center
 
 <img
   class="h-160"
-  src="/images/dashboard-modular.svg"
+  src="/images/dashboard-weather-highlighted.svg"
 />
 
 <style>
@@ -313,23 +322,23 @@ Multiple conditions
 
 Target multiple containers
 
-```css 
-.main {
+```css {all|3,11-13|8,15-17}
+.product-list {
   container-type: size;
-  container-name: main;
+  container-name: list;
 }
 
-.ancestor {
+.page {
   container-type: size;
-  container-name: ancestor;
+  container-name: folio;
 }
 
-@container main size(inline-size > 800px) {
-  .card {}
+@container list size(inline-size > 800px) {
+  .product {}
 }
 
-@container ancestor size(inline-size > 400px) and (block-size > 200px) {
-  .card {}
+@container folio size(inline-size > 400px) and size(block-size > 200px) {
+  .product {}
 }
 ```
 
@@ -353,7 +362,7 @@ Target multiple containers
 
 ---
 layout: image-right
-image: /images/dashboard-modular.svg
+image: /images/dashboard-weather-highlighted.svg
 ---
 
 # Size container features
@@ -396,16 +405,16 @@ image: /images/dashboard-modular.svg
 # State container features
 
 ```css 
-.product {
-  container-type: state;
+header {
+  container: is-stuck is-visible / header;
   position: sticky;
+  top: 0;
 }
 
-/* This syntax does not exist yet, just making something up. */
-@container state(sticky: true) {
-  .product-body {}
-}
+@container header (is-stuck) { /* … */ }
+@container header (is-visible) { /* … */ }
 ```
+<carbon-information class='mr-1' /> Proposition has been deferred https://github.com/w3c/csswg-drafts/issues/6402
 
 ---
 

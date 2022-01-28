@@ -6,12 +6,13 @@
     "export": "slidev export"
   },
   "dependencies": {
+    "@iconify-json/logos": "^1.0.4",
+    "@iconify-json/mdi": "^1.0.13",
     "@slidev/cli": "^0.28.2",
-    "slidev-theme-mrtnvh": "0.1.0"
+    "slidev-theme-mrtnvh": "0.2.0"
   },
   "name": "jsworld-22-slides",
   "devDependencies": {
-    "@iconify-json/logos": "^1.0.4",
-    "@iconify-json/mdi": "^1.0.13"
+    "playwright-chromium": "^1.18.1"
   }
 }
