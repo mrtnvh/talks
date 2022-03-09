@@ -16,7 +16,7 @@ background: ./images/frontend-at-scale-mar-22.jpg
 
 The next step towards a truly modular CSS.
 
-<div class="text-xs uppercase mt-4 text-gray-400">23 feb 2022 <span class="mx-2">\\</span> Guru Talks <span class="mx-2">\\</span> <a href="https://mrtnvh.com" target="_blank" rel="nofollow noopener">mrtnvh</a> </div>
+<div class="text-xs uppercase mt-4 text-gray-400">23 feb 2022 <span class="mx-2">\\</span> Frontend@Scale by Rabobank <span class="mx-2">\\</span> <a href="https://mrtnvh.com" target="_blank" rel="nofollow noopener">mrtnvh</a> </div>
 
 <!-- Photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pawel Czerwinski</a> on <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
 
