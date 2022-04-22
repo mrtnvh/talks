@@ -16,7 +16,7 @@ background: ./images/cq-shtf.jpg
 
 The next step towards a truly modular CSS.
 
-<div class="text-xs uppercase mt-4 text-gray-400">9 March 2022 <span class="mx-2">\\</span> Frontend@Scale by Rabobank <span class="mx-2">\\</span> <a href="https://mrtnvh.com" target="_blank" rel="nofollow noopener">mrtnvh</a> </div>
+<div class="text-xs uppercase mt-4 text-gray-400">28th of April 2022 <span class="mx-2">\\</span> Developer Week EU <span class="mx-2">\\</span> <a href="https://mrtnvh.com" target="_blank" rel="nofollow noopener">mrtnvh</a> </div>
 
 <!-- Photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pawel Czerwinski</a> on <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
 
@@ -32,7 +32,7 @@ layout: blocks
 
 ---
 layout: image-right
-image: https://res.cloudinary.com/mrtnvh/image/upload/c_scale/dpr_1.0/f_auto/q_auto/w_2400/h_1350/e_grayscale/e_tint:100:6366f1:0p:f5f3ff:100p/t_noise/v1642454529/mrtnvh.com/mrtnvh-portrait-2021.jpg
+image: https://res.cloudinary.com/mrtnvh/image/upload/c_scale/dpr_1.0/f_auto/q_auto/w_2400/h_1350/e_grayscale/e_tint:100:d946ef:0p:fdf2f8:100p/t_noise/v1642454529/mrtnvh.com/mrtnvh-portrait-2021.jpg
 ---
 
 <div class="flex flex-col items-center justify-center h-full text-center">
@@ -388,6 +388,8 @@ image: /images/dashboard-weather-highlighted.svg
 
 # Style container features
 
+<carbon-information class='mr-1' />  <a href="https://github.com/w3c/csswg-drafts/issues/7185">Proposition will likely be deferred to a later stage.</a>
+
 ```css 
 .product {
   container-type: style;
@@ -402,6 +404,8 @@ image: /images/dashboard-weather-highlighted.svg
 
 # State container features
 
+<carbon-information class='mr-1' />  <a href="https://github.com/w3c/csswg-drafts/issues/6402">Proposition has been deferred to a later stage.</a>
+
 ```css 
 header {
   container: is-stuck is-visible / header;
@@ -412,7 +416,6 @@ header {
 @container header state(is-stuck) { /* … */ }
 @container header state(is-visible) { /* … */ }
 ```
-<carbon-information class='mr-1' /> Proposition style container has been deferred https://github.com/w3c/csswg-drafts/issues/6402
 
 ---
 
@@ -476,6 +479,7 @@ header {
 # Experiment!
 
 - Chrome Canary: [chrome://flags/#enable-container-queries](chrome://flags/#enable-container-queries)
+- [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
 - Polyfill: https://github.com/GoogleChromeLabs/container-query-polyfill
 
 <br>
@@ -533,18 +537,18 @@ layout: browser
 
 # #TIL
 
-**Container queries**
-
-- Encapsulate adaptive styles
+- **Encapsulate adaptive styles**
   - Modular front-end architecture
-- Not limited to querying size
-  - Size
-  - Style
-  - State
-  - Container Relative units
-- Specification is under active development
-  - Experiment with [Chrome Canary](chrome://flags/#enable-container-queries) or [polyfill](chrome://flags/#enable-container-queries)
-  - Not ready for production
+- **Specification is under active development**
+  - Worked out
+    - Size
+    - Container Relative units
+  - Under consideration
+    - Style
+    - State
+  - <u>Not ready for production</u>
+- **Experiment**
+  - [Chrome Canary](chrome://flags/#enable-container-queries), [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/) or [polyfill](chrome://flags/#enable-container-queries)
 
 
 ---
@@ -578,10 +582,12 @@ layout: center
 layout: center
 ---
 
-<div class="text-center text-3xl">
-  
-  Me <mdi-arrow-right class='h-8 inline-block' /> [mrtnvh.com](https://mrtnvh.com) <br>
-  Team-up <mdi-arrow-right class='h-8 inline-block' /> [iodigital.com/careers](https://iodigital.com/careers)
+<div class="text-center">
+
+  # Thank you!
+
+  [mrtnvh.com](https://mrtnvh.com) <br>
+  [iodigital.com/careers](https://iodigital.com/careers)
 
 </div>
 
