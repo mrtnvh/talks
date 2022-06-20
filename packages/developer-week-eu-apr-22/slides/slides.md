@@ -254,11 +254,11 @@ Enable containment for container query
 
 ```css 
 .product {
-  container: product / size;
+  container: product / inline-size;
 
   /* Shorthand for */
   container-name: product;
-  container-type: size;
+  container-type: inline-size;
 }
 ```
 
@@ -273,8 +273,8 @@ Enable containment for container query
   /* Target specific containers*/
   container-name: product;
 
-  /* inline-size, size, style */
-  container-type: size;
+  /* inline-size, aspect-ratio, orientation */
+  container-type: inline-size;
 }
 ```
 
@@ -338,7 +338,7 @@ Target multiple containers
 .ancestor {
   /* container-type values: `inline-size`, `size`, `style` */
   /* Size allows querying `block-size`, `aspect-ratio`, and `orientation` */
-  container-type: size;
+  container-type: inline-size;
 }
 
 @container (inline-size > 800px) {
@@ -366,7 +366,7 @@ image: /images/dashboard-weather-highlighted.svg
 
 ```css
 .widget {
-  container: inline-size;
+  container-type: inline-size;
 }
 
 @container (inline-size > 500px) {
