@@ -422,42 +422,6 @@ layout: center
 
 ---
 
-
-# Priority
-
-<div class="flex gap-12">
-<div>
-
-```css
-@layer layer-1 { a { color: red !important; } }
-@layer layer-2 { a { color: orange !important; } }
-@layer layer-3 { a { color: yellow !important; } }
-/* un-layered */ a { color: green !important; }
-
-/* un-layered */ a { color: green; }
-@layer layer-1 { a { color: red; } }
-@layer layer-2 { a { color: orange; } }
-@layer layer-3 { a { color: yellow; } }
-```
-
-</div>
-
-<div>
-
-- !important layer-1 (most powerful)
-- !important layer-2
-- !important layer-3
-- !important un-layered styles
-- normal un-layered styles
-- normal layer-3
-- normal layer-2
-- normal layer-1 (least powerful)
-
-</div>
-</div>
-
----
-
 # Order @layer blocks
 
 ```css
@@ -555,7 +519,7 @@ layout: center
 
 <br/>
 
-* In development: layer attribute in the HTML <link> element
+* In development: layer attribute in the `link` HTML <link> element
 
 
 ---
