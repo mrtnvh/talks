@@ -6,13 +6,13 @@
     "export": "slidev export"
   },
   "dependencies": {
-    "@iconify-json/mdi": "^1.1.21",
     "@iconify-json/logos": "^1.0.4",
     "@slidev/cli": "^0.28.2",
     "slidev-theme-mrtnvh": "0.2.0"
   },
   "name": "io-summer-meetup-jun-22-slides",
   "devDependencies": {
+    "@iconify-json/mdi": "^1.1.24",
     "playwright-chromium": "^1.18.1"
   }
 }

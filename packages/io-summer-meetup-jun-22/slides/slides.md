@@ -156,7 +156,7 @@ layout: center
 
 <img
   class="h-100"
-  src="/images/pre march 2022 - shadow context.svg"
+  src="/images/pre-march-2022-shadow-context.svg"
   alt="The CSS Cascade before March 2022"
 />
 
@@ -221,7 +221,7 @@ layout: center
 
 <img
   class="h-100"
-  src="/images/pre march 2022 - selector specificity selector.svg"
+  src="/images/pre-march-2022-selector-specificity-selector.svg"
   alt="The CSS Cascade before March 2022"
 />
 
@@ -324,7 +324,7 @@ layout: center
 
 <img
   class="h-100"
-  src="/images/pre march 2022.svg"
+  src="/images/pre-march-2022.svg"
   alt="The CSS Cascade before March 2022"
 />
 
@@ -334,7 +334,7 @@ layout: center
 
 <img
   class="h-100"
-  src="/images/post march 2022.svg"
+  src="/images/post-march-2022.svg"
   alt="The CSS Cascade before March 2022"
 />
 
@@ -344,7 +344,7 @@ layout: center
 
 <img
   class="h-100"
-  src="/images/post march 2022 - cascade layers.svg"
+  src="/images/post-march-2022-cascade-layers.svg"
   alt="The CSS Cascade after March 2022"
 />
 
@@ -558,7 +558,7 @@ layout: center
 
 <img
   class="h-100"
-  src="/images/post march 2022.svg"
+  src="/images/post-march-2022.svg"
   alt="The CSS Cascade after March 2022"
 />
 
