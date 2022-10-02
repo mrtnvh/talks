@@ -9,7 +9,7 @@
     "@iconify-json/logos": "^1.0.4",
     "@iconify-json/mdi": "^1.0.13",
     "@slidev/cli": "^0.28.2",
-    "slidev-theme-mrtnvh": "../../slidev-theme-mrtnvh"
+    "slidev-theme-mrtnvh": "0.3.0"
   },
   "name": "frontmania-22-slides",
   "devDependencies": {
