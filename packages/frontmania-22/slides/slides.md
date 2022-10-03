@@ -16,86 +16,13 @@ background: ./images/hero.svg
 ---
 
 ---
-layout: center
----
-
-<h1 class="text-18xl">CSS</h1>
-
-<!--
-Before I start, does anyone here still remembers this? 
-CSS?
-
-Let’s take a trip down memory lane. In 2015 the number of new features in JavaScript started to boom. 
-
-Thanks to tools like Babel and browser polyfills, we can use things like modern array methods, map, filter, reduce, and things like the spread operator and so on. Features that matured the idea of web-applications.
--->
-
----
-layout: two-columns
-centered: true
----
-
-<template v-slot:default>
-  
-  # Compat 2021
-  - Flexbox & Grid
-  - CSS tranforms
-  - aspect-ratio
-
-</template>
-<template v-slot:second>
-  
-  # Interop 2022
-
-- Cascade Layers
-- Dynamic viewport units
-- Subgrid
-- Color spaces & functions
-
-</template>
-
-<!--
-Browser vendors got together in the Compat, or now the Interop workgroup to increase interoperability across browsers in key technical areas that are of high priority to web developers and end users.
-
-Thanks to the efforts of the Interop workgroup, in 2021 we’ve gained aspect-ratio support as a new feature and better cross-browser compatibility for Flexbox (e.g. the gap property, no more margins or paddings, thank you!), Grid, Transforms, etc.
-
-This year, we already gained support for
-- Cascade Layers
-- More Viewport units
-
-And better cross-browser compatibility for subgrid, color spaces and functions is on the horizon.
--->
-
----
-layout: center
----
-
-<h1 class="text-18xl">CSS</h1>
-
-<!--
-Truly, we are in the renaissance of CSS, don’t you agree?
-
-So, now that I hopefully have you a bit excited for CSS, let’s have a little crowd participation. Can we light up the audience for a minute?
-
-Ok. I’m going to count to three, and then we’re all going to shout C-S-S.
-
-One, two, three. C – S — S!
-
-[React to people shouting CSS or a room of utter silence]
-
-Nice! Give you yourself a round of applause. Great!
-
-On to the subject of the day.
--->
-
----
 layout: blocks
 ---
 
 <ul>
-  <li>Reusable components?</li>
-  <li v-click>Most optimal responsive layout?</li>
-  <li v-click>Media queries \\\\ config options?</li>
+  <li>Reusable components ?</li>
+  <li><span v-click>Optimal responsive layout ?</span></li>
+  <li><span v-click>Media queries \ config options ?</span></li>
 </ul>
 
 <!--
@@ -233,6 +160,128 @@ image: /images/dashboard-global-highlight.svg
 
 # Media queries?
 
+```css
+.widget { width: 100%; }
+
+@media (min-width: 480px) {
+  .widget { width: 100%; }
+}
+
+@media (min-width: 768px) {
+  .widget { width: 50%; }
+}
+
+@media (min-width: 1024px) {
+  .widget { width: 33.33%; }
+}
+```
+
+---
+layout: image-right
+image: /images/dashboard-global-highlight.svg
+---
+
+# Media queries?
+
+```css
+.widget { width: 100%; }
+
+@media (min-width: 480px) {
+  .widget { width: 50%; }
+}
+
+@media (min-width: 768px) {
+  .widget { width: 33.33%; }
+}
+```
+
+---
+layout: image-right
+image: /images/dashboard-global-highlight.svg
+---
+
+# Media queries?
+
+```css
+.widget { width: 100%; }
+
+@media (min-width: 480px) {
+  .widget.page-article { width: 50%; }
+}
+
+@media (min-width: 768px) {
+  .widget { width: 50%; }
+  .widget.page-article { width: 33.33%; }
+}
+
+@media (min-width: 1024px) {
+  .widget { width: 33.33%; }
+}
+```
+
+---
+layout: image-right
+image: /images/dashboard-global-highlight.svg
+---
+
+# Media queries?
+
+```css
+.widget { width: 100%; }
+
+@media (min-width: 480px) {
+  .widget.page-article { width: 50%; }
+  .widget.page-contact-form { width: 89%; }
+}
+
+@media (min-width: 768px) {
+  .widget { width: 50%; }
+  .widget.page-article { width: 33.33%; }
+  .widget.page-contact-form { width: 12.78%; }
+}
+
+@media (min-width: 1024px) {
+  .widget { width: 33.33%; }
+  .widget.page-contact-form { width: 52%; }
+}
+```
+
+---
+layout: image-right
+image: /images/dashboard-global-highlight.svg
+---
+
+# Media queries?
+
+```css
+.widget { width: 100%; }
+
+@media (min-width: 480px) { /* ... */ }
+
+@media (min-width: 661px) {
+  .widget-page-whateva { width: 651%; }
+}
+
+@media (min-width: 768px) { /* ... */ }
+
+@media (min-width: 678px) {
+  .widget-page-whateva { width: 56%; }
+}
+
+```
+
+<!--
+First thing to we'd might take into consideration is using media queries. However, media queries give us the ability to style responsively according to the viewport and doesn’t offer us enough flexibility to create modular styling.
+What could be possible solutions then?
+ -->
+
+---
+layout: image-right
+image: /images/dashboard-weather-highlighted.svg
+---
+
+# Media queries?
+
 - Query the viewport
 - Insufficient flexibility
 
@@ -246,42 +295,96 @@ layout: image-right
 image: /images/dashboard-weather-highlighted.svg
 ---
 
-# Custom classes?
+# Config options?
 
 ```html
 <internal-dashboard>
-  <external-widget type="bar" />
-  <external-widget type="pie" />
-  <external-widget type="weather" />
-  <external-widget type="users" />
+  <bar-widget />
+  <pie-widget />
+  <weather-widget size="large" />
+  <users-widget />
 </internal-dashboard>
 ```
 
 ```css
 internal-dashboard {}
 
-external-widget {}
-
-external-widget[type="gauge"] {}
-external-widget[type="pie"] {}
-external-widget[type="weather"] {}
-external-widget[type="users"] {}
+weather-widget {}
+weather-widget[size="large"] {}
+weather-widget[size="small"] {}
 ```
 
 <!--
-We could create custom classes per size.  .component--large, .component--small.
- -->
+We could create custom classes per size.  .component--large, .component--small. or pass down properties.
+-->
 
 ---
 layout: image-right
 image: /images/dashboard-weather-highlighted.svg
 ---
 
-# Custom classes?
+
+# Config options?
+
+```css
+weather-widget {}
+
+@media (min-width: 480px) {
+  weather-widget[size="large"] {}
+  weather-widget[size="small"] {}
+}
+
+@media (min-width: 768px) {
+  weather-widget[size="large"] {}
+  weather-widget[size="small"] {}
+}
+
+@media (min-width: 1024px) {
+  weather-widget[size="large"] {}
+  weather-widget[size="small"] {}
+}
+```
+
+---
+layout: image-right
+image: /images/dashboard-weather-highlighted.svg
+---
+
+```css
+weather-widget {}
+
+@media (min-width: 480px) {
+  weather-widget[size="large"] {}
+  weather-widget[size="small"] {}
+  .widget-page-whateva weather-widget[size="large"] {}
+  .widget-page-whateva weather-widget[size="small"] {}
+}
+
+@media (min-width: 768px) {
+  weather-widget[size="large"] {}
+  weather-widget[size="small"] {}
+  .widget-page-whateva weather-widget[size="large"] {}
+  .widget-page-whateva weather-widget[size="small"] {}
+}
+
+@media (min-width: 1024px) {
+  weather-widget[size="large"] {}
+  weather-widget[size="small"] {}
+  .widget-page-whateva weather-widget[size="large"] {}
+  .widget-page-whateva weather-widget[size="small"] {}
+}
+```
+
+---
+layout: image-right
+image: /images/dashboard-weather-highlighted.svg
+---
+
+# Config options?
 
 - End user is responsible for styling
-- Not automatically provided
 - End-user has to implement own layout logic
+- Not automatically provided
 
 <!--
 With this solution however, the final application is responsible for declaring the correct styling of the widget. We have to create extra styling in the dashboard application.	  It's still not possible to automatically provide the most optimal layout to the end-user. The end-user has to implement their own logic to handle this.
@@ -296,7 +399,7 @@ const $widget = document.querySelector(".widget");
 
 const resizeObserver = new ResizeObserver((entries) => {
   for (let entry of entries) {
-    if (entry.target.width > entry.contentBoxSize.inlineSize) {
+    if (entry.target.width > 640) {
       entry.target.classList.add("widget--large");
     } else {
       entry.target.classList.remove("widget--large");
@@ -314,6 +417,51 @@ resizeObserver.observe($widget);
 <!--
 Or we could use ResizeObserver API, a browser API that through JavaScript can take an elements size into account and act accordingly. But, with this solution, we have to wait until the JavaScript is evaluated. Without the proper measures, like some form of loading screen and making sure this solution is loaded before every other piece of JavaScript is ready, it can cause a Flash of Unstyled Content.
  -->
+
+---
+layout: center
+---
+
+<img
+  class="h-160"
+  src="/images/browser-empty.svg"
+/>
+
+<style>
+  .center {
+    background-color: #fbdfd4;
+  }
+</style>
+
+---
+layout: center
+---
+
+<img
+  class="h-160"
+  src="/images/dashboard-default.svg"
+/>
+
+<style>
+  .center {
+    background-color: #fbdfd4;
+  }
+</style>
+
+---
+layout: center
+---
+
+<img
+  class="h-160"
+  src="/images/dashboard-default-weather-bigger.svg"
+/>
+
+<style>
+  .center {
+    background-color: #fbdfd4;
+  }
+</style>
 
 ---
 layout: center
@@ -544,25 +692,12 @@ Containment always has to be set on an ancestor, in order for container queries 
   <div class="flex-grow">
 
 ```css
-.product,
-h2 {
+.product {
   container-type: size;
 }
 
 .product-grandchild {
-  height: 75cqi;
-}
-
-/* With fallback */
-/* The fallback value does not rely on containment */
-h2 {
-  font-size: 1.2em;
-}
-
-@container (min-inline-size : 0px) {
-  h2 {
-    font-size: calc(1.2em + 1cqi);
-  }
+  height: 100cqh;
 }
 ```
 
@@ -607,38 +742,6 @@ h2 {
 
 <!-- 
 Next to size container queries, we are also getting container relative units. Which are similar to viewport relative units. These will allow you to use dimensions of a container as a unit.
--->
-
----
-layout: image-right
-image: /images/dashboard-weather-highlighted.svg
----
-
-# Size container features
-
-```html
-<!-- external-widget-component -->
-<div class="widget">
-  <div class="widget-body">
-    <!-- widget-content -->
-  </div>
-</div>
-```
-
-```css
-.widget {
-  container: inline-size;
-}
-
-@container (min-inline-size: 500px) {
-  .widget-body {
-  }
-}
-```
-
-<!-- 
-Let's go back to our widgets.
-With the knowledge of container queries in our possession, we can refactor the use of custom classes or ResizeObserver to container queries. Keep in mind, we do have to add an extra wrapper if we want to style the base of the widget, as container queries can only query ancestors.
 -->
 
 ---
@@ -720,24 +823,134 @@ if (matchSixForty.matches) {
 }
 ```
 
+
+---
+layout: center
+---
+
+<h1 class="text-8xl">W.I.I.F.U. ?</h1>
+
+---
+layout: image-right
+image: /images/dashboard-weather-highlighted.svg
+---
+
+```css
+/* dashboard.css */
+
+weather-widget {}
+
+@media (min-width: 480px) {
+  weather-widget[size="large"] {}
+  weather-widget[size="small"] {}
+  .widget-page-whateva weather-widget[size="large"] {}
+  .widget-page-whateva weather-widget[size="small"] {}
+}
+
+@media (min-width: 768px) {
+  weather-widget[size="large"] {}
+  weather-widget[size="small"] {}
+  .widget-page-whateva weather-widget[size="large"] {}
+  .widget-page-whateva weather-widget[size="small"] {}
+}
+
+@media (min-width: 1024px) {
+  /* ... */
+}
+```
+
+---
+layout: image-right
+image: /images/dashboard-weather-highlighted.svg
+---
+
+```css
+/* weather-widget.css */
+
+.weather-widget {}
+
+@media (min-width: 480px) {
+  .weather-widget[data-size="large"] {}
+  .weather-widget[data-size="small"] {}
+  .widget-page-whateva weather-widget[data-size="large"] {}
+  .widget-page-whateva weather-widget[data-size="small"] {}
+}
+
+@media (min-width: 768px) {
+  .weather-widget[data-size="large"] {}
+  .weather-widget[data-size="small"] {}
+  .widget-page-whateva weather-widget[data-size="large"] {}
+  .widget-page-whateva weather-widget[data-size="small"] {}
+}
+
+@media (min-width: 1024px) {
+  /* ... */
+}
+```
+
+---
+layout: image-right
+image: /images/dashboard-weather-highlighted.svg
+---
+
+```css
+/* weather-widget.css */
+
+.widget {
+  container-type: inline-size;
+}
+
+.widget-body {}
+
+@container (min-width: 480px) {
+  .widget-body {}
+}
+
+@container (min-width: 768px) {
+  .widget-body {}
+}
+
+@media (min-width: 1024px) {
+  .widget-body {}
+}
+```
+
+---
+layout: image-right
+image: /images/dashboard-weather-highlighted.svg
+---
+
+# Size container features
+
+```html
+<!-- weather-widget -->
+<div class="widget">
+  <div class="widget-body">
+    <!-- widget-content -->
+  </div>
+</div>
+```
+
+```css
+.widget {
+  container: inline-size;
+}
+
+@container (min-inline-size: 500px) {
+  .widget-body {
+  }
+}
+```
+
+<!-- 
+Let's go back to our widgets.
+With the knowledge of container queries in our possession, we can refactor the use of custom classes or ResizeObserver to container queries. Keep in mind, we do have to add an extra wrapper if we want to style the base of the widget, as container queries can only query ancestors.
+-->
+
+
 <!-- 
 Furthermore there are active discussions of creating a matchMedia equivalent, matchContainer, in which you can query containers in JavaScript and so on.
 Look at all that power container queries throws into our lap. 
--->
-
----
-
-# Participate!
-
-- [CSSWG Specification](https://drafts.csswg.org/css-contain-3/) <br>
-- [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Container_Queries) <br>
-- [CSS Working Group discussions on Github](https://github.com/w3c/csswg-drafts/projects/18) <br>
-- [awesome-container-queries](https://github.com/sturobson/Awesome-Container-Queries)
-
-<!--
-As always, the community is happy to accept your contribution. You, too, can contribute to the future of the web. If you have any special use cases or maybe not so everyday ideas concerning the use of Container Queries. 
-
-Check out or give feedback on Container Queries conversation at the CSS Working Group issues project on GitHub or share your examples and experiments by opening a PR in the Awesome Container Queries repository.
 -->
 
 ---
@@ -829,6 +1042,21 @@ With container queries, we can encapsulate adaptive styling in elements. It's th
 Size container queries and container relative units are available today in Chrome 105, Edge 105 and Safari 16. And there is a polyfill available, but keep in mind that this could lead to a Flash of unstyled Content when using SSR or Static Site Generation.
 
 The Container Queries umbrella is not limited to only querying dimensions. Querying computed styles, certain element states, and several more features, are in under discussion with CSS Working Group.
+-->
+
+---
+
+# Participate!
+
+- [CSSWG Specification](https://drafts.csswg.org/css-contain-3/) <br>
+- [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Container_Queries) <br>
+- [CSS Working Group discussions on Github](https://github.com/w3c/csswg-drafts/projects/18) <br>
+- [awesome-container-queries](https://github.com/sturobson/Awesome-Container-Queries)
+
+<!--
+As always, the community is happy to accept your contribution. You, too, can contribute to the future of the web. If you have any special use cases or maybe not so everyday ideas concerning the use of Container Queries. 
+
+Check out or give feedback on Container Queries conversation at the CSS Working Group issues project on GitHub or share your examples and experiments by opening a PR in the Awesome Container Queries repository.
 -->
 
 ---
