@@ -144,8 +144,12 @@ image: /images/dashboard-weather-bigger.svg
 
 As a user:
 
-- I should be able to customize my dashboard by resizing widgets.
-- I want to less or more information depending on size.
+- I want to less or more information depending on the size of the widget.
+- On the dashboard page, I want to choose the size of the widget.
+
+As a developer:
+
+- I want to reuse the same component throughout different layouts.
 
 <!--
 For instance. If we choose a prioritize the weather widget, next to only show todays weather, we could show additional information like the expected precipitation or the expected temperature for upcoming days.
@@ -155,7 +159,7 @@ How would we translate these requirements, with possible side-effects, to code?
 
 ---
 layout: image-right
-image: /images/dashboard-global-highlight.svg
+image: /images/dashboard-weather-bigger.svg
 ---
 
 # Media queries?
@@ -178,7 +182,7 @@ image: /images/dashboard-global-highlight.svg
 
 ---
 layout: image-right
-image: /images/dashboard-global-highlight.svg
+image: /images/article.svg
 ---
 
 # Media queries?
@@ -197,7 +201,7 @@ image: /images/dashboard-global-highlight.svg
 
 ---
 layout: image-right
-image: /images/dashboard-global-highlight.svg
+image: /images/article-dashboard.svg
 ---
 
 # Media queries?
@@ -221,7 +225,7 @@ image: /images/dashboard-global-highlight.svg
 
 ---
 layout: image-right
-image: /images/dashboard-global-highlight.svg
+image: /images/article-dashboard-form.svg
 ---
 
 # Media queries?
@@ -248,7 +252,7 @@ image: /images/dashboard-global-highlight.svg
 
 ---
 layout: image-right
-image: /images/dashboard-global-highlight.svg
+image: /images/article-dashboard-form-other.svg
 ---
 
 # Media queries?
@@ -259,13 +263,13 @@ image: /images/dashboard-global-highlight.svg
 @media (min-width: 480px) { /* ... */ }
 
 @media (min-width: 661px) {
-  .widget-page-whateva { width: 651%; }
+  .page-whateva { width: 651%; }
 }
 
 @media (min-width: 768px) { /* ... */ }
 
 @media (min-width: 678px) {
-  .widget-page-whateva { width: 56%; }
+  .page-whateva { width: 56%; }
 }
 
 ```
@@ -277,7 +281,7 @@ What could be possible solutions then?
 
 ---
 layout: image-right
-image: /images/dashboard-weather-highlighted.svg
+image: /images/article-dashboard-form-other.svg
 ---
 
 # Media queries?
@@ -347,7 +351,7 @@ weather-widget {}
 
 ---
 layout: image-right
-image: /images/dashboard-weather-highlighted.svg
+image: /images/article-dashboard-form-other.svg
 ---
 
 ```css
@@ -356,22 +360,22 @@ weather-widget {}
 @media (min-width: 480px) {
   weather-widget[size="large"] {}
   weather-widget[size="small"] {}
-  .widget-page-whateva weather-widget[size="large"] {}
-  .widget-page-whateva weather-widget[size="small"] {}
+  .page-whateva weather-widget[size="large"] {}
+  .page-whateva weather-widget[size="small"] {}
 }
 
 @media (min-width: 768px) {
   weather-widget[size="large"] {}
   weather-widget[size="small"] {}
-  .widget-page-whateva weather-widget[size="large"] {}
-  .widget-page-whateva weather-widget[size="small"] {}
+  .page-whateva weather-widget[size="large"] {}
+  .page-whateva weather-widget[size="small"] {}
 }
 
 @media (min-width: 1024px) {
   weather-widget[size="large"] {}
   weather-widget[size="small"] {}
-  .widget-page-whateva weather-widget[size="large"] {}
-  .widget-page-whateva weather-widget[size="small"] {}
+  .page-whateva weather-widget[size="large"] {}
+  .page-whateva weather-widget[size="small"] {}
 }
 ```
 
@@ -422,10 +426,17 @@ Or we could use ResizeObserver API, a browser API that through JavaScript can ta
 layout: center
 ---
 
+<div class="text-center">
+
 <img
-  class="h-160"
-  src="/images/browser-empty.svg"
+  class="h-150"
+  src="/images/empty.svg"
 />
+
+  <div class="-mt-24 mb-24">
+    Flash Of Unstyled Content - 1 - Empty
+  </div>
+</div>
 
 <style>
   .center {
@@ -437,11 +448,18 @@ layout: center
 layout: center
 ---
 
+<div class="text-center">
+
 <img
-  class="h-160"
+  class="h-150"
   src="/images/dashboard-default.svg"
 />
 
+  <div class="-mt-24 mb-24">
+    Flash Of Unstyled Content - 2 - CSS ready
+  </div>
+</div>
+
 <style>
   .center {
     background-color: #fbdfd4;
@@ -452,10 +470,17 @@ layout: center
 layout: center
 ---
 
+<div class="text-center">
+
 <img
-  class="h-160"
+  class="h-150"
   src="/images/dashboard-default-weather-bigger.svg"
 />
+
+  <div class="-mt-24 mb-24">
+    Flash Of Unstyled Content - 3 - JS ready
+  </div>
+</div>
 
 <style>
   .center {
@@ -745,14 +770,23 @@ Next to size container queries, we are also getting container relative units. Wh
 -->
 
 ---
+layout: center
+---
 
-Cromium
-Chrome 105
-Edge
-Webkit
-Safari 16
+<div class="text-center">
 
-<carbon-warning-alt class='mr-1' /> Flash of Unstyled Content
+<img
+  class="h-45 mb-16"
+  src="/images/browsers.svg"
+/>
+
+<div>
+  + <a href="https://www.npmjs.com/package/container-query-polyfill" target="_blank" rel="noopener noreferrer" class="text-2xl" >container-query-polyfill</a>
+  <br />
+  <small><carbon-warning-alt class='mr-1' /> Flash of Unstyled Content</small>
+</div>
+
+</div>
 
 <!--
 Now, one of the show that makes me all gitty:
@@ -766,6 +800,12 @@ And if you’d like to have more support, there is a polyfill available that use
 But, this is not where are story ends,
 As the dimensional parts of the specification are as good as fleshed out, the following features are currently still open for further development.
 -->
+
+---
+layout: center
+---
+
+<h1 class="text-7xl">Under consideration</h1>
 
 ---
 
@@ -835,69 +875,91 @@ layout: image-right
 image: /images/dashboard-weather-highlighted.svg
 ---
 
+```html
+<div class="page-whateva">
+  <div class="dashboard">
+    <weather-widget size="large" />
+  </div>
+</div>
+```
+
 ```css
-/* dashboard.css */
+.dashboard {}
+.page-whateva .dashboard {}
+weather-widget {}
+
+@media (min-width: 480px) {
+  weather-widget[size="large"] {}
+  weather-widget[size="small"] {}
+  .page-whateva weather-widget[size="large"] {}
+  .page-whateva weather-widget[size="small"] {}
+}
+
+@media (min-width: 768px) { /* Repeat here */ }
+@media (min-width: 1024px) { /* Repeat here */ }
+```
+
+---
+layout: image-right
+image: /images/weather-widget.svg
+---
+
+```css
+/* dashboard */
+
+.dashboard {}
+.page-whateva .dashboard {}
+```
+
+```css
+/* weather-widget.css */
 
 weather-widget {}
 
 @media (min-width: 480px) {
   weather-widget[size="large"] {}
   weather-widget[size="small"] {}
-  .widget-page-whateva weather-widget[size="large"] {}
-  .widget-page-whateva weather-widget[size="small"] {}
+  .page-whateva weather-widget[size="large"] {}
+  .page-whateva weather-widget[size="small"] {}
 }
 
-@media (min-width: 768px) {
-  weather-widget[size="large"] {}
-  weather-widget[size="small"] {}
-  .widget-page-whateva weather-widget[size="large"] {}
-  .widget-page-whateva weather-widget[size="small"] {}
-}
-
-@media (min-width: 1024px) {
-  /* ... */
-}
+@media (min-width: 768px) { /* Repeat here */ }
+@media (min-width: 1024px) { /* Repeat here */ }
 ```
 
 ---
 layout: image-right
-image: /images/dashboard-weather-highlighted.svg
+image: /images/weather-widget.svg
 ---
+
+```html
+<!-- weather-widget markup -->
+
+<div class="widget">
+  <div class="widget-body">
+    <!-- widget-content -->
+  </div>
+</div>
+```
 
 ```css
 /* weather-widget.css */
 
-.weather-widget {}
-
-@media (min-width: 480px) {
-  .weather-widget[data-size="large"] {}
-  .weather-widget[data-size="small"] {}
-  .widget-page-whateva weather-widget[data-size="large"] {}
-  .widget-page-whateva weather-widget[data-size="small"] {}
-}
-
-@media (min-width: 768px) {
-  .weather-widget[data-size="large"] {}
-  .weather-widget[data-size="small"] {}
-  .widget-page-whateva weather-widget[data-size="large"] {}
-  .widget-page-whateva weather-widget[data-size="small"] {}
-}
-
-@media (min-width: 1024px) {
-  /* ... */
+.widget {
+  container: size;
 }
 ```
 
 ---
 layout: image-right
-image: /images/dashboard-weather-highlighted.svg
+image: /images/weather-widget.svg
 ---
 
 ```css
 /* weather-widget.css */
 
 .widget {
-  container-type: inline-size;
+  container-type: size;
 }
 
 .widget-body {}
@@ -916,42 +978,10 @@ image: /images/dashboard-weather-highlighted.svg
 ```
 
 ---
-layout: image-right
-image: /images/dashboard-weather-highlighted.svg
+layout: center
 ---
 
-# Size container features
-
-```html
-<!-- weather-widget -->
-<div class="widget">
-  <div class="widget-body">
-    <!-- widget-content -->
-  </div>
-</div>
-```
-
-```css
-.widget {
-  container: inline-size;
-}
-
-@container (min-inline-size: 500px) {
-  .widget-body {
-  }
-}
-```
-
-<!-- 
-Let's go back to our widgets.
-With the knowledge of container queries in our possession, we can refactor the use of custom classes or ResizeObserver to container queries. Keep in mind, we do have to add an extra wrapper if we want to style the base of the widget, as container queries can only query ancestors.
--->
-
-
-<!-- 
-Furthermore there are active discussions of creating a matchMedia equivalent, matchContainer, in which you can query containers in JavaScript and so on.
-Look at all that power container queries throws into our lap. 
--->
+<h1 class="text-10xl text-center leading-none">Container <br/> Queries !</h1>
 
 ---
 layout: center
