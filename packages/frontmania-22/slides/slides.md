@@ -503,23 +503,9 @@ Luckily for us, something’s landed in a few major stable browsers!
 layout: center
 ---
 
-<h1 class="text-10xl text-center leading-none">Container <br/> Queries</h1>
-
-<!--
-Container Queries, element queries, … The possibility of querying each element its own dimensions is something we've been looking for since modular front-end architecture met responsive web design, and has been on the discussion radar for over almost a decade now.
-
-Thanks to recent improvements to browser rendering engines and the advent of the CSS containment specification, container queries, which can lead to heavy layout calculations, can finally be implemented in a performant way without sacrificing anything of the user experience.
-
-With container queries, the component itself owns all of its responsive styles. It's the optimal solution for responsive component-based architectures, like design systems and component libraries.
--->
-
----
-layout: center
----
-
 <img
   class="h-160"
-  src="/images/dashboard-weather-highlighted.svg"
+  src="/images/article-dashboard-form-other.svg"
 />
 
 <style>
@@ -528,23 +514,30 @@ layout: center
   }
 </style>
 
+---
+layout: center
+---
+
+<img
+  class="h-160"
+  src="/images/weather-widget.svg"
+/>
+
+<style>
+  .center {
+    background-color: #fbdfd4;
+  }
+</style>
+
+---
+layout: center
+---
+
+<h1 class="text-10xl text-center leading-none">Container <br/> Queries</h1>
+
 <!--
 It splits up responsibilities for styling our layout. For example, the larger parts of your webpage, things where a media query makes more sense, will be responsible for the larger layout, like grids and the smaller parts, like individual components will have their own responsibility for their own layout based on the available space they will have in the larger layout.
  -->
-
----
-layout: browser
----
-
-<div class="browser-wrapper">
-    <div class="browser-body">
-        <iframe src="https://codepen.io/una/full/mdOgyVL" />
-    </div>
-</div>
-
-<!--
-In this example, created by Una Kravets, we see a page of an ecommerce platform where we can order several kinds of plants to spruce up our home offices. Each product component is implemented using the same CSS class. Using Container Queries, each product component will adapt to its most optimal layout according to the space available.
--->
 
 ---
 
@@ -897,6 +890,31 @@ weather-widget {}
 
 @media (min-width: 768px) { /* Repeat here */ }
 @media (min-width: 1024px) { /* Repeat here */ }
+```
+
+---
+layout: image-right
+image: /images/article-dashboard-form-other.svg
+---
+
+```css
+.dashboard {}
+.page-whateva .dashboard {}
+weather-widget {}
+/* More styles */
+
+@media (min-width: 480px) {
+  weather-widget[size="large"] {}
+  weather-widget[size="small"] {}
+  .page-whateva weather-widget[size="large"] {}
+  .page-whateva weather-widget[size="small"] {}  
+  /* More styles */
+}
+
+@media (min-width: 768px) { /* Repeat here */ }
+@media (min-width: 1024px) { /* Repeat here */ }
+
+/* More styles */
 ```
 
 ---
