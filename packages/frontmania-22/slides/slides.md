@@ -126,8 +126,12 @@ image: /images/dashboard-transparent.svg
 
 As a user:
 
-- I should be able to customize my dashboard by resizing widgets.
-- I want to less or more information depending on size.
+- I want to less or more information depending on the size of the widget.
+- On the dashboard page, I want to choose the size of the widget.
+
+As a developer:
+
+- I want to reuse the same component throughout different layouts.
 
 <!--
 The following user stories have to be implemented in this page.
