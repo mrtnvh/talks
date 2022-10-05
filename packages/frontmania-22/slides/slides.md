@@ -300,7 +300,7 @@ What could be possible solutions then?
 
 ---
 layout: image-right
-image: /images/dashboard-weather-highlighted.svg
+image: /images/dashboard-default-weather-bigger.svg
 ---
 
 # Config options?
@@ -328,7 +328,7 @@ We could create custom classes per size.  .component--large, .component--small. 
 
 ---
 layout: image-right
-image: /images/dashboard-weather-highlighted.svg
+image: /images/dashboard-default-weather-bigger.svg
 ---
 
 
@@ -385,7 +385,7 @@ weather-widget {}
 
 ---
 layout: image-right
-image: /images/dashboard-weather-highlighted.svg
+image: /images/dashboard-default-weather-bigger.svg
 ---
 
 # Config options?
@@ -869,7 +869,7 @@ layout: center
 
 ---
 layout: image-right
-image: /images/dashboard-weather-highlighted.svg
+image: /images/dashboard-default-weather-bigger.svg
 ---
 
 ```html
