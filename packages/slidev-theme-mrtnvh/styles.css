@@ -171,7 +171,7 @@ td {
 thead > tr {
     height: 40px;
 }
-th {
+thead > th {
     font-size: 0.75rem;
     font-weight: 400;
     text-align: left;
@@ -182,11 +182,11 @@ th {
     border-top: 1px solid var(--accents-2);
     border-bottom: 1px solid var(--accents-2);
 }
-th:first-child {
+thead > th:first-child {
     border-left: 1px solid var(--accents-2);
     border-radius: var(--mrtnvh-radius) 0 0 var(--mrtnvh-radius);
 }
-th:last-child {
+thead > th:last-child {
     border-right: 1px solid var(--accents-2);
     border-radius: 0 var(--mrtnvh-radius) var(--mrtnvh-radius) 0;
 }
