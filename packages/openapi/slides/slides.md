@@ -3,7 +3,7 @@ theme: mrtnvh
 routerMode: "hash"
 layout: cover
 
-title: Container Queries
+title: OpenAPI
 titleTemplate: "%s - mrtnvh"
 
 fonts:
