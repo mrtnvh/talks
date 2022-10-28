@@ -16,6 +16,16 @@ background: ./images/mrtnvh_a_group_of_developers_wirelessly_interconnected_thro
 ---
 
 ---
+layout: browser
+---
+
+<div class="browser-wrapper">
+    <div class="browser-body">
+        <iframe src="https://petstore.swagger.io/" />
+    </div>
+</div>
+
+---
 layout: cover
 background: ./images/law-of-communication.svg
 ---
@@ -124,6 +134,8 @@ background: ./images/langs-io-openapi.svg
 
 ---
 
+# OpenAPI
+
 The OpenAPI Specification (OAS) defines a <u>standard, language-agnostic interface to RESTful APIs</u> which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection.
 
 When properly defined, a consumer can <u>understand</u> and <u>interact</u> with the remote service with a <u>minimal amount of implementation logic</u>.
@@ -131,6 +143,11 @@ When properly defined, a consumer can <u>understand</u> and <u>interact</u> with
 <br /><br /><br /><br /><br /><br /><br /><br />
 
 <small><a href="https://github.com/OAI/OpenAPI-Specification/">https://github.com/OAI/OpenAPI-Specification/</a></small>
+
+---
+layout: center
+---
+<h1 class="text-12xl text-center leading-none">Code</h1>
 
 ---
 layout: code
@@ -293,6 +310,11 @@ components:
 ```
 
 ---
+layout: center
+---
+<h1 class="text-10xl text-center leading-none">Workflows</h1>
+
+---
 layout: background
 background: ./images/code-first.svg
 ---
@@ -358,20 +380,7 @@ background: ./images/design-first.svg
 ---
 layout: center
 ---
-<h1 class="text-10xl text-center leading-none">Tooling</h1>
-
----
-
-# Documentation
-
-Generate entire API documentation
-Less technical representation
-Tools:
-
-- [Swagger UI](https://swagger.io/tools/swagger-ui/) 
-- [ReDoc](https://redoc.ly/redoc/)
-- [Elements (by Stoplight)](https://stoplight.io/open-source/elements) 
-
+<h1 class="text-10xl text-center leading-none">Tools</h1>
 
 ---
 layout: browser
@@ -392,6 +401,18 @@ layout: browser
         <iframe src="https://elements-demo.stoplight.io/?spec=https://petstore.swagger.io/v2/swagger.json" />
     </div>
 </div>
+
+---
+
+# Documentation
+
+Generate entire API documentation
+Less technical representation
+Tools:
+
+- [Swagger UI](https://swagger.io/tools/swagger-ui/) 
+- [ReDoc](https://redoc.ly/redoc/)
+- [Elements (by Stoplight)](https://stoplight.io/open-source/elements)
 
 
 ---
@@ -450,6 +471,15 @@ layout: browser
 
 ---
 
+
+# Mocking
+
+- Develop against non-existing dependency
+- Parallel development
+- Independence
+
+---
+
 # Mocking
 
 [Prism (by Stoplight)](https://github.com/stoplightio/prism) turns OpenAPI files into a API server.
@@ -460,11 +490,6 @@ layout: browser
 - Data transformations
 - Input / output validations
 - ...
-
-<br />
-
-- Parallel development
-- Platform Indepencency
 
 
 ---
@@ -546,27 +571,46 @@ layout: code
   }
 ]
 ```
+
 ---
 
 
 # Mocking
 
+- Develop against non-existing dependency
 - Parallel development
-- Platform Indepencency
+- Independence
 
 [Prism (by Stoplight)](https://github.com/stoplightio/prism)
 
 ---
+layout: center
+---
+<h1 class="text-10xl text-center leading-none">Automation</h1>
+
+---
+layout: center
+---
+
+<div class="text-center text-3xl">
+OpenAPI doc as Single Source Truth <br />
++ <br />
+automation <br />
+= <br />
+happy teams
+</div>
+
+---
 
 # Automation
-
-OpenAPI doc = Single Source Truth
-
 - Instant documentation updates
 - SDK generation at new release/commit
 - Mocking server updates
 
-&nbsp;
+---
+layout: center
+---
+<h1 class="text-12xl text-center leading-none">Demo</h1>
 
 ---
 
