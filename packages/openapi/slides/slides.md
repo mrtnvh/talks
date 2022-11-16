@@ -16,16 +16,6 @@ background: ./images/mrtnvh_a_group_of_developers_wirelessly_interconnected_thro
 ---
 
 ---
-layout: browser
----
-
-<div class="browser-wrapper">
-    <div class="browser-body">
-        <iframe src="https://petstore.swagger.io/" />
-    </div>
-</div>
-
----
 layout: cover
 background: ./images/law-of-communication.svg
 ---
@@ -37,28 +27,14 @@ background: ./images/comms-server.svg
 
 ---
 layout: cover
-background: ./images/comms-languages.svg
----
-
----
-layout: cover
-background: ./images/langs.svg
----
-
----
-layout: cover
-background: ./images/langs-question.svg
----
-
----
-layout: cover
-background: ./images/langs-io.svg
+background: ./images/comms-restful.svg
 ---
 
 ---
 layout: center
 ---
 <h1 class="text-12xl text-center leading-none">OpenAPI</h1>
+<div class="text-center -mt-5">or the specification formerly known as Swagger</div>
 
 ---
 layout: center
@@ -88,16 +64,6 @@ background: ./images/io-center.svg
 
 ---
 layout: cover
-background: ./images/io-campus.svg
----
-
----
-layout: cover
-background: ./images/io-campus-brands.svg
----
-
----
-layout: cover
 background: ./images/io-brands.svg
 ---
 
@@ -108,27 +74,12 @@ background: ./images/io-langs.svg
 
 ---
 layout: cover
-background: ./images/law-of-communication.svg
+background: ./images/langs-schemas.svg
 ---
 
 ---
 layout: cover
-background: ./images/comms-server.svg
----
-
----
-layout: cover
-background: ./images/comms-languages.svg
----
-
----
-layout: cover
-background: ./images/langs-io.svg
----
-
----
-layout: cover
-background: ./images/langs-io-openapi.svg
+background: ./images/langs-schemas-openapi.svg
 ---
 
 
@@ -154,6 +105,30 @@ layout: code
 ---
 
 ```yml
+openapi: # Specification version
+
+info: # General API metadata
+
+servers: # Server information. BaseURLs, environments, ...
+
+paths: # Available paths & operations
+
+components: # Datamodel abstraction
+
+security: # Security mechanisms can be used across the API
+
+tags: # Grouping of paths & components
+
+external docs: # Additional external documentation
+
+webhooks: # Webhook operations, similar to paths, only API is now a consumer.
+```
+
+---
+layout: code
+---
+
+```yml{6-9}
 openapi: # Specification version
 
 info: # General API metadata
@@ -215,16 +190,14 @@ paths:
           schema:
             type: integer
             format: int32
-      responses:
-        #...
-
+      
       # description
       # requestBody
-      # externalDocs
-      # deprecated
       # security
-      # servers
       # ...
+
+      responses:
+        #...
 
 ```
 
@@ -237,7 +210,9 @@ paths:
 
   /pets:
     get:
+
       #...
+      
       responses:
         '200':
           description: Expected response to a valid request
@@ -322,29 +297,6 @@ background: ./images/code-first.svg
 # Code first
 
 ---
-
-# Code first
-
-Generate OpenAPI document from API framework
-
-<table>
-  <tbody>
-    <tr>
-      <td style="width: 4.5rem;">Java</td>
-      <td>springdoc-openapi, ...</td>
-    </tr>
-    <tr>
-      <td>.NET</td>
-      <td>SwashBuckle, Nswag, ...</td>
-    </tr>
-    <tr>
-      <td>NodeJS</td>
-      <td>@nestjs/swagger, ...</td>
-    </tr>
-  </tbody>
-</table>
-
----
 layout: background
 background: ./images/code-first.svg
 ---
@@ -371,16 +323,27 @@ Entire team can be involved in developing the communication layer.
 - Project owner: future implementation, roadmap considerations
 
 ---
-layout: background
-background: ./images/design-first.svg
----
-
-# Design first
-
----
 layout: center
 ---
 <h1 class="text-10xl text-center leading-none">Tools</h1>
+
+
+---
+layout: background
+background: ./images/tools-openapi.svg
+---
+
+---
+layout: background
+background: ./images/tools.svg
+---
+
+---
+layout: background
+background: ./images/tools-docs.svg
+---
+
+# Documentation
 
 ---
 layout: browser
@@ -406,9 +369,10 @@ layout: browser
 
 # Documentation
 
-Generate entire API documentation
-Less technical representation
-Tools:
+- Generate entire API documentation
+- Less technical representation
+
+**Tools:**
 
 - [Swagger UI](https://swagger.io/tools/swagger-ui/) 
 - [ReDoc](https://redoc.ly/redoc/)
@@ -417,28 +381,22 @@ Tools:
 
 ---
 layout: background
-background: ./images/sdk-one.svg
+background: ./images/tools-sdk.svg
 ---
 
-# SDK Generation
-
----
-layout: background
-background: ./images/sdk-two.svg
----
-
-# SDK Generation
+# Code generation
 
 ---
 layout: background
-background: ./images/sdk-three.svg
+background: ./images/tools-sdk-langs.svg
 ---
 
-# SDK Generation
+# Code generation
+
 
 ---
 
-# SDK Generation
+# Code generation
 
 <table>
   <tbody>
@@ -446,7 +404,7 @@ background: ./images/sdk-three.svg
       <td style="width: 18rem;">
         <a href="https://openapi.tools/#sdk">openapi.tools</a>
       </td>
-      <td>List of OpenAPI SDK generators </td>
+      <td>List of OpenAPI code generators </td>
     </tr>
     <tr>
       <td><a href="https://openapi-generator.tech/">openapi-generator.tech</a></td>
@@ -463,14 +421,28 @@ background: ./images/sdk-three.svg
 layout: browser
 ---
 
-<div class="browser-wrapper">
+<div class="browser-wrapper no-zoom">
     <div class="browser-body">
         <iframe src="https://openapi-generator.tech/docs/generators" />
     </div>
 </div>
 
+<style>
+  .browser-wrapper.no-zoom iframe {
+    transform: translate(-17.5%, -17.5%) scale(.66);
+    width: 152.75%;
+    height: 152.75%;
+  }
+</style>
+
+---
+layout: background
+background: ./images/tools-mocking.svg
 ---
 
+# Mocking
+
+---
 
 # Mocking
 
@@ -520,6 +492,41 @@ paths:
                       format: int64
                     name:
                       type: string
+                    tag:
+                      type: string
+
+```
+
+---
+layout: code
+---
+
+```yml{14,17-25}
+# https://petstore.com/openapi.yaml
+paths:
+
+  /pets:
+    get:
+      operationId: listPets
+      
+      responses:
+        "200":
+          content:
+            application/json:
+              
+              schema:
+                type: array
+                items:
+                  
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                      format: int64
+                    name:
+                      type: string
+                    tag:
+                      type: string
 
 ```
 
@@ -535,6 +542,12 @@ prism mock -d https://petstore.com/openapi.yaml
 # OR run Prism in Docker
 # docker run --init -p 4010:4010 stoplight/prism:4 mock -d -h 0.0.0.0 https://petstore.com/openapi.yaml
 
+[0:00:00 PM] › [CLI] …  awaiting  Starting Prism…
+[0:00:00 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/pets
+[0:00:00 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/pets
+[0:00:00 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/pets/lorem
+[0:00:00 PM] › [CLI] ▶  start     Prism is listening on http://127.0.0.1:4010
+
 ```
 
 ---
@@ -544,7 +557,7 @@ layout: code
 ```bash
 
 # Perform request
-curl https://petstore.swagger.io/v2/pet/1 | json_pp
+curl https://localhost:4010/pets | json_pp
 
 ```
 
@@ -584,9 +597,41 @@ layout: code
 [Prism (by Stoplight)](https://github.com/stoplightio/prism)
 
 ---
-layout: center
+layout: background
+background: ./images/tools.svg
 ---
-<h1 class="text-10xl text-center leading-none">Automation</h1>
+
+# Automation
+
+---
+layout: background
+background: ./images/tools-automation.svg
+---
+
+# Automation
+
+---
+
+# Automation
+
+<div>Versioning</div>
+
+  - **git submodules**
+  - **language agnostic** dependency management
+
+<br/>
+
+<div>CI/CD</div>
+
+  - Instant documentation updates
+  - API contract style linting
+
+<br/>
+
+<div>Development environments</div> 
+
+  - SDK generation at startup
+  - Mocking server auto-update
 
 ---
 layout: center
@@ -599,13 +644,6 @@ automation <br />
 = <br />
 happy teams
 </div>
-
----
-
-# Automation
-- Instant documentation updates
-- SDK generation at new release/commit
-- Mocking server updates
 
 ---
 layout: center
@@ -653,4 +691,20 @@ layout: center
 layout: center
 ---
 
-<mdi-peace class='w-48 h-48' />
+<a href="https://mrtnvh.com" target="_blank" rel="nofollow noopener">
+  <img
+    class="h-96"
+    src="/images/peace.svg"
+  />
+</a>
+---
+layout: center
+---
+
+<a href="https://mrtnvh.com" target="_blank" rel="nofollow noopener">
+  <img
+    class="h-96"
+    src="/images/peace-qr.svg"
+  />
+</a>
+
