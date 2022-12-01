@@ -1,7 +1,11 @@
-# Container Queries
+# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
 
-In here are the slides for the talk: Container queries, The next step towards a truly modular CSS.
+To start the slide show:
 
-Available on https://devcast-june-2021.mrtnvh.com
+- `npm install`
+- `npm run dev`
+- visit http://localhost:3030
 
-Built on [reveal.js](https://github.com/hakimel/reveal.js/)
+Edit the [slides.md](./slides.md) to see the changes.
+
+Learn more about Slidev on [documentations](https://sli.dev/).
