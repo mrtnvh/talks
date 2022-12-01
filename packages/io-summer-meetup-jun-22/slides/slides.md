@@ -196,7 +196,7 @@ layout: center
 
 <img
   class="h-100"
-  src="/images/pre march 2022 - element attached.svg"
+  src="/images/pre-march-2022-element-attached.svg"
   alt="The CSS Cascade before March 2022"
 />
 
@@ -288,7 +288,7 @@ layout: center
 
 <img
   class="h-100"
-  src="/images/pre march 2022 - order of appearance.svg"
+  src="/images/pre-march-2022-order-of-appearance.svg"
   alt="The CSS Cascade before March 2022"
 />
 
