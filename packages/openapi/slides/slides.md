@@ -355,17 +355,6 @@ layout: browser
     </div>
 </div>
 
----
-layout: browser
----
-
-<div class="browser-wrapper">
-    <div class="browser-body">
-        <iframe src="https://elements-demo.stoplight.io/?spec=https://petstore.swagger.io/v2/swagger.json" />
-    </div>
-</div>
-
----
 
 # Documentation
 
