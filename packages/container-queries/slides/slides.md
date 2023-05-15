@@ -20,9 +20,9 @@ layout: blocks
 ---
 
 <ul>
-  <li>Reusable components ?</li>
-  <li><span v-click>Optimal responsive layout ?</span></li>
-  <li><span v-click>Media queries \ config options ?</span></li>
+  <li>Reusable components</li>
+  <li><span v-click>Optimize responsive layout</span></li>
+  <li><span v-click>Media queries \ config options \ other</span></li>
 </ul>
 
 <!--
@@ -77,6 +77,21 @@ The goal of component libraries is that you can easily hand off components to ot
 
 Typically, the question we have as developers is how to optimize responsive styling for these components.
 -->
+
+---
+layout: center
+---
+<div class="text-center">
+  <h1 class="text-9xl">Expert<span class="text-lime-500">?</span></h1>
+</div>
+
+
+---
+layout: center
+---
+<div class="text-center">
+  <h1 class="text-9xl">Exper<span class="text-lime-500">imen</span>t<span class="text-lime-500">!</span></h1>
+</div>
 
 ---
 layout: center
@@ -171,15 +186,15 @@ image: /images/dashboard-weather-bigger.svg
 ```css
 .widget { width: 100%; }
 
-@media (min-width: 480px) {
+@media (inline-size >= 480px) {
   .widget { width: 100%; }
 }
 
-@media (min-width: 768px) {
+@media (inline-size >= 768px) {
   .widget { width: 50%; }
 }
 
-@media (min-width: 1024px) {
+@media (inline-size >= 1024px) {
   .widget { width: 33.33%; }
 }
 ```
@@ -194,11 +209,11 @@ image: /images/article.svg
 ```css
 .widget { width: 100%; }
 
-@media (min-width: 480px) {
+@media (inline-size >= 480px) {
   .widget { width: 50%; }
 }
 
-@media (min-width: 768px) {
+@media (inline-size >= 768px) {
   .widget { width: 33.33%; }
 }
 ```
@@ -213,16 +228,16 @@ image: /images/article-dashboard.svg
 ```css
 .widget { width: 100%; }
 
-@media (min-width: 480px) {
+@media (inline-size >= 480px) {
   .widget.page-article { width: 50%; }
 }
 
-@media (min-width: 768px) {
+@media (inline-size >= 768px) {
   .widget { width: 50%; }
   .widget.page-article { width: 33.33%; }
 }
 
-@media (min-width: 1024px) {
+@media (inline-size >= 1024px) {
   .widget { width: 33.33%; }
 }
 ```
@@ -237,18 +252,18 @@ image: /images/article-dashboard-form.svg
 ```css
 .widget { width: 100%; }
 
-@media (min-width: 480px) {
+@media (inline-size >= 480px) {
   .widget.page-article { width: 50%; }
   .widget.page-contact-form { width: 89%; }
 }
 
-@media (min-width: 768px) {
+@media (inline-size >= 768px) {
   .widget { width: 50%; }
   .widget.page-article { width: 33.33%; }
   .widget.page-contact-form { width: 12.78%; }
 }
 
-@media (min-width: 1024px) {
+@media (inline-size >= 1024px) {
   .widget { width: 33.33%; }
   .widget.page-contact-form { width: 52%; }
 }
@@ -264,15 +279,15 @@ image: /images/article-dashboard-form-other.svg
 ```css
 .widget { width: 100%; }
 
-@media (min-width: 480px) { /* ... */ }
+@media (inline-size >= 480px) { /* ... */ }
 
-@media (min-width: 661px) {
+@media (inline-size >= 661px) {
   .page-whateva { width: 651%; }
 }
 
-@media (min-width: 768px) { /* ... */ }
+@media (inline-size >= 768px) { /* ... */ }
 
-@media (min-width: 678px) {
+@media (inline-size >= 678px) {
   .page-whateva { width: 56%; }
 }
 
@@ -337,17 +352,17 @@ image: /images/dashboard-default-weather-bigger.svg
 ```css
 weather-widget {}
 
-@media (min-width: 480px) {
+@media (inline-size >= 480px) {
   weather-widget[size="large"] {}
   weather-widget[size="small"] {}
 }
 
-@media (min-width: 768px) {
+@media (inline-size >= 768px) {
   weather-widget[size="large"] {}
   weather-widget[size="small"] {}
 }
 
-@media (min-width: 1024px) {
+@media (inline-size >= 1024px) {
   weather-widget[size="large"] {}
   weather-widget[size="small"] {}
 }
@@ -361,21 +376,21 @@ image: /images/article-dashboard-form-other.svg
 ```css
 weather-widget {}
 
-@media (min-width: 480px) {
+@media (inline-size >= 480px) {
   weather-widget[size="large"] {}
   weather-widget[size="small"] {}
   .page-whateva weather-widget[size="large"] {}
   .page-whateva weather-widget[size="small"] {}
 }
 
-@media (min-width: 768px) {
+@media (inline-size >= 768px) {
   weather-widget[size="large"] {}
   weather-widget[size="small"] {}
   .page-whateva weather-widget[size="large"] {}
   .page-whateva weather-widget[size="small"] {}
 }
 
-@media (min-width: 1024px) {
+@media (inline-size >= 1024px) {
   weather-widget[size="large"] {}
   weather-widget[size="small"] {}
   .page-whateva weather-widget[size="large"] {}
@@ -544,67 +559,60 @@ It splits up responsibilities for styling our layout. For example, the larger pa
  -->
 
 ---
+layout: blocks
+---
 
-# CSS Containment
+<ul>
+  <li><span class="text-6xl">Size</span></li>
+  <li><span class="text-6xl">Units</span></li>
+  <li><span class="text-6xl">Style</span></li>
+</ul>
 
-- Improves rendering performance
-- DOM subtree isolation
-- Enables container queries
+---
+layout: blocks
+---
+
+<ul>
+  <li><span class="text-6xl">Size</span></li>
+  <li><span class="text-6xl text-gray-300">Units</span></li>
+  <li><span class="text-6xl text-gray-300">Style</span></li>
+</ul>
+
+---
+
+# Size container queries
+
+Which container can be queried for it's size?
 
 <br/>
 
 ```css
 .product {
-  contain: size layout style;
+  container-type: size;
 }
 ```
 
-<!--
-Container Queries are a part of the CSS Containment Module Level 3, and the specification is currently a Working Draft, which means that the CSS working group is actively working on the feature. A basis has already been set and details are being ironed out as we speak.
-CSS containment allows us to improve rendering performance by isolation of a DOM subtree or in other words indicating that an element and its contents rendering should be handled independently of the rest of the document tree.
-That isolation is what enables us to query elements using container queries.
--->
+<br/>
 
----
-
-# Container Queries
-
-Enable containment for container query
-
-```css
-.product {
-  container: product / size;
-
-  /* Shorthand for */
-  container-name: product; /* Target specific containers*/
-  container-type: size; /* Type of values you want to query */
-}
-```
-
-<!--
-After some back and forth on how we should declare container queries, specification now defines a distinct property container, which is a shorthand for container-type and container-name.
-The container-name property enables us to implement multi-level container queries. With container names you can target specific containers to query. More on that later.
--->
-
----
-
-# Size container features
-
-```css
-.product {
-  container-type: size; /* inline-size, normal */
-}
-```
-
-<br />
-
-- **Size**
-  - inline-size
-  - block-size
-  - aspect-ratio
-  - orientation
-- **Inline-size**
-- **Normal**: remove containment, disable container queries
+<table>
+  <tr>
+    <td colspan="3">
+      <strong>container-type values</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>size</td>
+    <td>x- and y-axis</td>
+  </tr>
+  <tr>
+    <td>inline-size</td>
+    <td>x-axis</td>
+  </tr>
+  <tr>
+    <td>normal</td>
+    <td>Disable element as query container for container size queries</td>
+  </tr>
+</table>
 
 <!-- 
 There a several types of container-types. One of them is already in the browsers, because of its significant impact. The others are still being hashed out by the working group.
@@ -615,7 +623,50 @@ Values can be size, that target both width and height or inline-size and block-s
 
 ---
 
-# Size container features
+# Size container queries
+
+For what condition should we query?
+
+<br/>
+
+```css
+@container (inline-size >= 400px) {}
+```
+
+<br/>
+<br/>
+
+<div class="flex gap-24">
+  <div>
+    <strong>container-type: size</strong>
+    <div class="flex gap-12">
+      <ul>
+        <li>width</li>
+        <li>height</li>
+        <li>inline-size</li>
+      </ul>
+      <ul>
+        <li>block-size</li>
+        <li>aspect-ratio</li>
+        <li>orientation (landscape, portrait)</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div>
+    <strong>container-type: inline-size</strong>
+    <div class="flex gap-12">
+      <ul>
+        <li>width</li>
+        <li>inline-size</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+---
+
+# Size container queries
 
 Single condition
 
@@ -624,10 +675,14 @@ Single condition
   container-type: inline-size;
 }
 
-@container (min-inline-size: 400px) {
-  .product-body {}
+.product-body {
+  @container (inline-size >= 400px) { 
+    /* ... */ 
+  }
 }
 ```
+
+<br />
 
 <!-- 
 The actual container query is declared using the @container rule, which has a similar syntax to the @media rule or media query.
@@ -636,7 +691,7 @@ In this example, the query will match if the inline-size, the logical property o
 
 ---
 
-# Size container features
+# Size container queries
 
 Multiple conditions
 
@@ -645,8 +700,10 @@ Multiple conditions
   container-type: size;
 }
 
-@container (min-inline-size: 400px) and (min-block-size: 200px) {
-  .product-body {}
+.product-body {
+  @container (inline-size >= 400px) and (block-size >= 200px) {
+    /* ... */  
+  }
 }
 ```
 
@@ -656,27 +713,24 @@ Like media queries, we can use multiple conditions. Here, the query will match i
 
 ---
 
-# Size container features
+# Size container queries
 
 Target multiple containers
 
-```css {all|3,11-13|8,15-17}
-.product-list {
-  container-type: inline-size;
-  container-name: list;
-}
-
+```css {all|3,12|8,13}
 .page {
   container-type: size;
   container-name: folio;
 }
 
-@container list (min-inline-size: 800px) {
-  .product {}
+.product-list {
+  container-type: inline-size;
+  container-name: list;
 }
 
-@container folio (min-inline-size: 400px) and (min-block-size: 200px) {
-  .product {}
+.product {
+  @container folio (inline-size >= 400px) and (block-size >= 200px) { /* ... */  }
+  @container list (inline-size >= 800px) { /* ... */ }
 }
 ```
 <!--
@@ -685,16 +739,40 @@ An additional feature to container queries has compared to media queries, is the
 
 ---
 
-# Size container features
+# Size container queries
+
+<code>container</code> shorthand
+
+```css {all|2,10|6,11}
+.page {
+  container: folio / size;
+}
+
+.product-list {
+  container: list / inline-size;
+}
+
+.product {
+  @container folio (inline-size >= 400px) and (block-size >= 200px) { /* ... */  }
+  @container list (inline-size >= 800px) { /* ... */ }
+}
+```
+<!--
+An additional feature to container queries has compared to media queries, is the addition of container-name. This way we can filter queries to a specific ancestor. Here, the product could change depending on the inline-size of our product-list element on the one hand and on both the inline-size and block-size of the page element on the other hand.
+-->
+
+---
+
+# Size container queries
 
 <carbon-warning-alt class='mr-2' /> Containment always has to be set on an ancestor.
 
 ```css
 .ancestor {
-  container-type: size;
+  container-type: inline-size;
 }
 
-@container (min-inline-size: 800px) {
+@container (inline-size >= 800px) {
   .ancestor {
     /* NOPE */
   }
@@ -705,6 +783,71 @@ An additional feature to container queries has compared to media queries, is the
 An important note with using container queries is that container cannot query themselves.
 Containment always has to be set on an ancestor, in order for container queries to match.
 -->
+
+---
+layout: browser
+---
+
+<div class="browser-wrapper">
+    <div class="browser-body">
+        <iframe src="https://codepen.io/shadeed/full/poRLxvO" />
+    </div>
+</div>
+
+---
+layout: browser
+---
+
+<div class="browser-wrapper">
+    <div class="browser-body">
+        <iframe src="https://codepen.io/vanhoofmaarten/full/mdWBMGb" />
+    </div>
+</div>
+
+<!-- 
+A good use case for container queries, I believe, is a shopping cart component, where we have declared all our shopping cart business logic and styles in one single place, like the calculated subtotal of the quantity and price of a product and the calculation of the grand total.
+
+With container queries, we can then re-use that single component, for example, on the actual shopping cart page or in the header as a mini cart. Depending on the size given to the component, it will adapt its styling. The larger desktop version of this component is, thanks to container queries, also immediately optimized for mobile devices.
+-->
+
+---
+layout: browser
+---
+
+<div class="browser-wrapper">
+    <div class="browser-body">
+        <iframe src="https://codepen.io/vanhoofmaarten/full/WNpJoGq" />
+    </div>
+</div>
+
+<!-- 
+We can even go as far as using container queries in our SVGs, and by extension SVG-sprites, a technique to reuse SVG images throughout a webpage by only having to declare it once. 
+
+SVGs support CSS and also container queries. By declaring responsive styles in an SVG or SVG-sprite, we can create truly responsive SVG and SVG-sprites.
+In this experiment, we see SVG images of a stegosaurs and a diplodocus, both are part of the same SVG-sprite, declared at the top of the document and are used in the main part of the document.
+
+If I enlarge the image of the stegosaurus, we see the outline disappear and the same goes for the diplodocus, only at a larger size. Container queries tailored to each image declared once for in the SVG-sprite make this possible. Go check out the CodePen later on for more information.
+-->
+
+---
+layout: browser
+---
+
+<div class="browser-wrapper">
+    <div class="browser-body">
+        <iframe src="https://caniuse.com/css-container-queries" style="width: 100%; height: 100%; transform: scale(1);" />
+    </div>
+</div>
+
+---
+layout: blocks
+---
+
+<ul>
+  <li><span class="text-6xl text-gray-300">Size</span></li>
+  <li><span class="text-6xl">Units</span></li>
+  <li><span class="text-6xl text-gray-300">Style</span></li>
+</ul>
 
 ---
 
@@ -719,7 +862,7 @@ Containment always has to be set on an ancestor, in order for container queries 
 }
 
 .product-grandchild {
-  height: 100cqh;
+  height: 100cqb;
 }
 ```
 
@@ -767,54 +910,49 @@ Next to size container queries, we are also getting container relative units. Wh
 -->
 
 ---
-layout: center
+layout: browser
 ---
 
-<div class="text-center">
-
-<img
-  class="h-45 mb-16"
-  src="/images/browsers.svg"
-/>
-
-<div>
-  + <a href="https://www.npmjs.com/package/container-query-polyfill" target="_blank" rel="noopener noreferrer" class="text-2xl" >container-query-polyfill</a>
-  <br />
-  <small><carbon-warning-alt class='mr-1' /> Flash of Unstyled Content</small>
+<div class="browser-wrapper">
+    <div class="browser-body">
+        <iframe src="https://codepen.io/scottkellum/full/jOwmOZE" />
+    </div>
 </div>
 
+---
+layout: browser
+---
+
+<div class="browser-wrapper">
+    <div class="browser-body">
+        <iframe src="https://caniuse.com/css-container-query-units" style="width: 100%; height: 100%; transform: scale(1);" />
+    </div>
 </div>
 
-<!--
-Now, one of the show that makes me all gitty:
-
-Container Queries are now supported in stable releases of 2 major browser engines. Chromium-based, Chrome 105 and Edge 105 and Webkit-based, Safari 16.
-
-This means that if you’re targeting a mostly mobile audience and know that browser updates on Android are mostly automatic and that iOS user are pretty good at updating their devices, half of your user base probably has support for container queries by now. Firefox is actively working on their implementation.
-
-And if you’d like to have more support, there is a polyfill available that uses the ResizeObserver solution we talked about earlier, to enable the Container Query functionality. But be aware, of that Flash of unstyled content.
-
-But, this is not where are story ends,
-As the dimensional parts of the specification are as good as fleshed out, the following features are currently still open for further development.
--->
-
 ---
-layout: center
+layout: blocks
 ---
 
-<h1 class="text-7xl">Under consideration</h1>
+<ul>
+  <li><span class="text-6xl text-gray-300">Size</span></li>
+  <li><span class="text-6xl text-gray-300">Units</span></li>
+  <li><span class="text-6xl">Style</span></li>
+</ul>
 
 ---
 
-# Style container features
+# Style container queries
+
+Query computed styles of query container.
 
 ```css
 .product {
-  container-type: style;
+  container-type: normal;
 }
 
-@container style(background: red) {
-  .product-body {
+.product-body {
+  @container style(background: red) {
+    /* ... */
   }
 }
 ```
@@ -825,41 +963,37 @@ With style container features, we can query the container's computed values. For
 
 ---
 
-# State container features
+# Style container queries
 
-```css
-header {
-  container: is-stuck is-visible / header;
-  position: sticky;
-  top: 0;
-}
+= CSS conditionals
 
-@container header (is-stuck) {
-  /* … */
-}
-@container header (is-visible) {
-  /* … */
-}
-```
+<iframe height="350" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/mrtnvh/embed/preview/abRjjgL?default-tab=html%2Cresult&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/mrtnvh/pen/abRjjgL">
+  Untitled</a> by Maarten Van Hoof (<a href="https://codepen.io/mrtnvh">@mrtnvh</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
-<carbon-information class='mr-1' /> Proposition has [been deferred](https://github.com/w3c/csswg-drafts/issues/6402), might get replaced by [CSS toggle feature](https://css.oddbird.net/toggles/explainer/).
+---
+layout: browser
+---
 
-<!-- 
-State container features will allow us to query certain states of container. One of the most obvious examples is querying if a container with the property position: sticky is in its sticky state. But there are already other propositions out there and the CSS working group is now looking into what is the most robust solution.
--->
+<div class="browser-wrapper">
+    <div class="browser-body">
+      <iframe scrolling="no" title="Container Style Queries - View selector - Style container queries + HTML table" src="https://codepen.io/mrtnvh/embed/preview/KKxeLrX?default-tab=result&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/mrtnvh/pen/KKxeLrX">
+  Container Style Queries - View selector - Style container queries + HTML table</a> by Maarten Van Hoof (<a href="https://codepen.io/mrtnvh">@mrtnvh</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+      </iframe>
+    </div>
+</div>
 
 ---
 
-# matchContainer
-
-```js
-const matchSixForty = element.matchContainer("(min-inline-size: 640px)");
-
-if (matchSixForty.matches) {
-  // Do something
-}
-```
-
+<div class="browser-wrapper">
+    <div class="browser-body">
+        <iframe src="https://caniuse.com/css-container-queries-style" style="width: 100%; height: 100%; transform: scale(1);" />
+    </div>
+</div>
 
 ---
 layout: center
@@ -872,7 +1006,7 @@ layout: image-right
 image: /images/dashboard-default-weather-bigger.svg
 ---
 
-```html
+```HTML
 <div class="page-whateva">
   <div class="dashboard">
     <weather-widget size="large" />
@@ -885,15 +1019,15 @@ image: /images/dashboard-default-weather-bigger.svg
 .page-whateva .dashboard {}
 weather-widget {}
 
-@media (min-width: 480px) {
+@media (inline-size >= 480px) {
   weather-widget[size="large"] {}
   weather-widget[size="small"] {}
   .page-whateva weather-widget[size="large"] {}
   .page-whateva weather-widget[size="small"] {}
 }
 
-@media (min-width: 768px) { /* Repeat here */ }
-@media (min-width: 1024px) { /* Repeat here */ }
+@media (inline-size >= 768px) { /* Repeat here */ }
+@media (inline-size >= 1024px) { /* Repeat here */ }
 ```
 
 ---
@@ -907,7 +1041,7 @@ image: /images/article-dashboard-form-other.svg
 weather-widget {}
 /* More styles */
 
-@media (min-width: 480px) {
+@media (inline-size >= 480px) {
   weather-widget[size="large"] {}
   weather-widget[size="small"] {}
   .page-whateva weather-widget[size="large"] {}
@@ -915,8 +1049,8 @@ weather-widget {}
   /* More styles */
 }
 
-@media (min-width: 768px) { /* Repeat here */ }
-@media (min-width: 1024px) { /* Repeat here */ }
+@media (inline-size >= 768px) { /* Repeat here */ }
+@media (inline-size >= 1024px) { /* Repeat here */ }
 
 /* More styles */
 ```
@@ -938,15 +1072,15 @@ image: /images/weather-widget.svg
 
 weather-widget {}
 
-@media (min-width: 480px) {
+@media (inline-size >= 480px) {
   weather-widget[size="large"] {}
   weather-widget[size="small"] {}
   .page-whateva weather-widget[size="large"] {}
   .page-whateva weather-widget[size="small"] {}
 }
 
-@media (min-width: 768px) { /* Repeat here */ }
-@media (min-width: 1024px) { /* Repeat here */ }
+@media (inline-size >= 768px) { /* Repeat here */ }
+@media (inline-size >= 1024px) { /* Repeat here */ }
 ```
 
 ---
@@ -981,90 +1115,60 @@ image: /images/weather-widget.svg
 /* weather-widget.css */
 
 .widget {
-  container-type: size;
+  container-type: inline-size;
 }
 
-.widget-body {}
-
-@container (min-width: 480px) {
-  .widget-body {}
-}
-
-@container (min-width: 768px) {
-  .widget-body {}
-}
-
-@media (min-width: 1024px) {
-  .widget-body {}
+.widget-body {
+  @container (inline-size >= 480px) {}
+  @container (inline-size >= 768px) {}
+  @container (inline-size >= 1024px) {}
 }
 ```
 
 ---
+layout: image-right
+image: /images/weather-widget.svg
+---
+
+```css
+/* weather-widget.css */
+
+.widget {
+  container-type: inline-size;
+
+  --wdgt-feature-a: false;
+}
+
+.widget-body {
+  @container (inline-size >= 480px) {
+    --wdgt-feature-a: true;
+  }
+}
+
+.widget-temperature {
+  display: none;
+
+  @container style(--wdgt-feature-a: true) {
+    display: block;
+  }
+}
+```
+
+---
+layout: browser
+---
+
+<div class="browser-wrapper">
+    <div class="browser-body">
+        <iframe src="https://spontaneous-crepe-7edffa.netlify.app/" />
+    </div>
+</div>
+
+---
 layout: center
 ---
 
-<h1 class="text-10xl text-center leading-none">Container <br/> Queries !</h1>
-
----
-layout: center
----
-
-<h1 class="text-8xl">Experiments</h1>
-
----
-layout: browser
----
-
-<div class="browser-wrapper">
-    <div class="browser-body">
-        <iframe src="https://codepen.io/shadeed/full/poRLxvO" />
-    </div>
-</div>
-
----
-layout: browser
----
-
-<div class="browser-wrapper">
-    <div class="browser-body">
-        <iframe src="https://codepen.io/vanhoofmaarten/full/mdWBMGb" />
-    </div>
-</div>
-
-<!-- 
-A good use case for container queries, I believe, is a shopping cart component, where we have declared all our shopping cart business logic and styles in one single place, like the calculated subtotal of the quantity and price of a product and the calculation of the grand total.
-
-With container queries, we can then re-use that single component, for example, on the actual shopping cart page or in the header as a mini cart. Depending on the size given to the component, it will adapt its styling. The larger desktop version of this component is, thanks to container queries, also immediately optimized for mobile devices.
--->
-
----
-layout: browser
----
-
-<div class="browser-wrapper">
-    <div class="browser-body">
-        <iframe src="https://codepen.io/scottkellum/full/jOwmOZE" />
-    </div>
-</div>
-
----
-layout: browser
----
-
-<div class="browser-wrapper">
-    <div class="browser-body">
-        <iframe src="https://codepen.io/vanhoofmaarten/full/WNpJoGq" />
-    </div>
-</div>
-
-<!-- 
-We can even go as far as using container queries in our SVGs, and by extension SVG-sprites, a technique to reuse SVG images throughout a webpage by only having to declare it once. 
-
-SVGs support CSS and also container queries. By declaring responsive styles in an SVG or SVG-sprite, we can create truly responsive SVG and SVG-sprites.
-In this experiment, we see SVG images of a stegosaurs and a diplodocus, both are part of the same SVG-sprite, declared at the top of the document and are used in the main part of the document.
-
-If I enlarge the image of the stegosaurus, we see the outline disappear and the same goes for the diplodocus, only at a larger size. Container queries tailored to each image declared once for in the SVG-sprite make this possible. Go check out the CodePen later on for more information.
--->
+<h1 class="text-10xl text-center leading-none">Container <br/> Queries</h1>
 
 ---
 
@@ -1072,20 +1176,16 @@ If I enlarge the image of the stegosaurus, we see the outline disappear and the 
 
 **Container queries** -> Encapsulate adaptive styles -> Modular front-end architecture
 
+**Support in all major browser engines:**
 - Size queries
 - Container Relative units
 
-[]()
-
-- Chrome 105
-- Edge 105
-- Safari 16
-- container-query-polyfill (FOUC!)
-
-Under active development
-
+**Partial support** in Chrome
 - Style queries
-- State queries
+
+<br/>
+
+
 
 <!--
 Let's bring this to a close, shall we? What did we learn today?
@@ -1105,6 +1205,12 @@ The Container Queries umbrella is not limited to only querying dimensions. Query
 - [CSS Working Group discussions on Github](https://github.com/w3c/csswg-drafts/projects/18) <br>
 - [awesome-container-queries](https://github.com/sturobson/Awesome-Container-Queries)
 
+Bugs? Report 'm!
+
+- https://bugs.chromium.org/p/chromium/
+- https://webkit.org/reporting-bugs/
+- https://bugzilla.mozilla.org/home
+
 <!--
 As always, the community is happy to accept your contribution. You, too, can contribute to the future of the web. If you have any special use cases or maybe not so everyday ideas concerning the use of Container Queries. 
 
@@ -1120,8 +1226,8 @@ layout: center
   <h1 class="text-15xl">Share</h1>
 
   <div class="flex align-center gap-2 justify-center">
-    <mdi-twitter />
-    <a href="https://twitter.com/mrtnvh" target="_blank" rel="noopener">@mrtnvh</a>
+    <mdi-mastodon class="mt-1" />
+    <a href="https://twitter.com/mrtnvh" target="_blank" rel="noopener">mrtnvh@techhub.social</a>
   </div>
 
 </div>
@@ -1158,7 +1264,7 @@ layout: center
     />
   </a>
   
-  [iodigital.com/careers](https://iodigital.com/careers)
+  [iodigital.com](https://iodigital.com)
 
 </div>
 
