@@ -53,18 +53,9 @@ My name is Maarten.
  -->
 
 ---
-layout: center
+layout: cover
+background: ./images/io-roles.svg
 ---
-
-<div class="flex flex-col items-center justify-center h-full text-center text-2xl">
-  <a href="https://iodigital.com" class="mb-12" target="_blank" rel="nofollow noopener">
-    <img
-      class="h-48"
-      src="/images/io-logo.svg"
-    />
-  </a>
-  Developer Advocate <br/> Front-end
-</div>
 
 <!--
 I am a Developer Advocate and Front-ender at iO at the Campus Eindhoven in the Netherlands. 
@@ -82,7 +73,7 @@ Typically, the question we have as developers is how to optimize responsive styl
 layout: center
 ---
 <div class="text-center">
-  <h1 class="text-9xl">Expert<span class="text-lime-500">?</span></h1>
+  <h1 class="text-9xl">Expert<span style="color: #ED7F53;">?</span></h1>
 </div>
 
 
@@ -90,7 +81,7 @@ layout: center
 layout: center
 ---
 <div class="text-center">
-  <h1 class="text-9xl">Exper<span class="text-lime-500">imen</span>t<span class="text-lime-500">!</span></h1>
+  <h1 class="text-9xl">Exper<span style="color: #ED7F53;">imen</span>t<span style="color: #ED7F53;">!</span></h1>
 </div>
 
 ---
