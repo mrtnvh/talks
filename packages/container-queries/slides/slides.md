@@ -974,9 +974,11 @@ layout: browser
 ---
 layout: center
 ---
+<div class="text-center">
 
-<h1 class="text-8xl">W.I.I.F.U. ?</h1>
-
+  <h1 class="text-8xl">W.I.I.F.U. ?</h1>
+  What's in it for us?
+</div>
 ---
 layout: image-right
 image: /images/article-dashboard-form-other.svg
