@@ -104,21 +104,6 @@ Let me give you an example.
 Let's say we're part of a project and our goal is to build this dashboard-page.
  -->
 
----
-layout: center
----
-
-<img
-  class="h-160"
-  src="/images/dashboard-transparent.svg"
-/>
-
-<style>
-  .center {
-    background-color: #fbdfd4;
-  }
-</style>
-
 <!--
 If we take out of account the header and the sidebar for a second and look at the page's main content, we see a handful of widgets. A pie-chart showing our favourite bars, a bar graph showing our favourite pies, a weather widget and user list widget.
  -->
@@ -994,35 +979,6 @@ layout: center
 
 ---
 layout: image-right
-image: /images/dashboard-default-weather-bigger.svg
----
-
-```HTML
-<div class="page-whateva">
-  <div class="dashboard">
-    <weather-widget size="large" />
-  </div>
-</div>
-```
-
-```css
-.dashboard {}
-.page-whateva .dashboard {}
-weather-widget {}
-
-@media (inline-size >= 480px) {
-  weather-widget[size="large"] {}
-  weather-widget[size="small"] {}
-  .page-whateva weather-widget[size="large"] {}
-  .page-whateva weather-widget[size="small"] {}
-}
-
-@media (inline-size >= 768px) { /* Repeat here */ }
-@media (inline-size >= 1024px) { /* Repeat here */ }
-```
-
----
-layout: image-right
 image: /images/article-dashboard-form-other.svg
 ---
 
@@ -1030,76 +986,31 @@ image: /images/article-dashboard-form-other.svg
 .dashboard {}
 .page-whateva .dashboard {}
 weather-widget {}
-/* More styles */
+/* ... */
 
 @media (inline-size >= 480px) {
   weather-widget[size="large"] {}
   weather-widget[size="small"] {}
   .page-whateva weather-widget[size="large"] {}
   .page-whateva weather-widget[size="small"] {}  
-  /* More styles */
 }
 
-@media (inline-size >= 768px) { /* Repeat here */ }
-@media (inline-size >= 1024px) { /* Repeat here */ }
-
-/* More styles */
-```
-
----
-layout: image-right
-image: /images/weather-widget.svg
----
-
-```css
-/* dashboard */
-
-.dashboard {}
-.page-whateva .dashboard {}
-```
-
-```css
-/* weather-widget.css */
-
-weather-widget {}
-
-@media (inline-size >= 480px) {
+@media (inline-size >= 768px) {
   weather-widget[size="large"] {}
   weather-widget[size="small"] {}
   .page-whateva weather-widget[size="large"] {}
   .page-whateva weather-widget[size="small"] {}
 }
-
-@media (inline-size >= 768px) { /* Repeat here */ }
-@media (inline-size >= 1024px) { /* Repeat here */ }
-```
-
----
-layout: image-right
-image: /images/weather-widget.svg
----
-
-```html
-<!-- weather-widget markup -->
-
-<div class="widget">
-  <div class="widget-body">
-    <!-- widget-content -->
-  </div>
-</div>
-```
-
-```css
-/* weather-widget.css */
-
-.widget {
-  container: size;
+@media (inline-size >= 1024px) { 
+  /* ... */
 }
+
+/* ... */
 ```
 
 ---
 layout: image-right
-image: /images/weather-widget.svg
+image: /images/article-dashboard-form-other.svg
 ---
 
 ```css
@@ -1118,7 +1029,7 @@ image: /images/weather-widget.svg
 
 ---
 layout: image-right
-image: /images/weather-widget.svg
+image: /images/article-dashboard-form-other.svg
 ---
 
 ```css
@@ -1149,7 +1060,7 @@ image: /images/weather-widget.svg
 layout: browser
 ---
 
-<div class="browser-wrapper">
+<div class="browser-wrapper" style="border: 0">
     <div class="browser-body">
         <iframe src="https://spontaneous-crepe-7edffa.netlify.app/" />
     </div>
@@ -1165,11 +1076,17 @@ layout: center
 
 # #TIL
 
-**Container queries** -> Encapsulate adaptive styles -> Modular front-end architecture
+**Container queries**
+- Encapsulate adaptive styles
+- Modular front-end architecture
+
+<br/>
 
 **Support in all major browser engines:**
 - Size queries
 - Container Relative units
+
+<br/>
 
 **Partial support** in Chrome
 - Style queries
@@ -1188,27 +1105,6 @@ The Container Queries umbrella is not limited to only querying dimensions. Query
 -->
 
 ---
-
-# Participate!
-
-- [CSSWG Specification](https://drafts.csswg.org/css-contain-3/) <br>
-- [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Container_Queries) <br>
-- [CSS Working Group discussions on Github](https://github.com/w3c/csswg-drafts/projects/18) <br>
-- [awesome-container-queries](https://github.com/sturobson/Awesome-Container-Queries)
-
-Bugs? Report 'm!
-
-- https://bugs.chromium.org/p/chromium/
-- https://webkit.org/reporting-bugs/
-- https://bugzilla.mozilla.org/home
-
-<!--
-As always, the community is happy to accept your contribution. You, too, can contribute to the future of the web. If you have any special use cases or maybe not so everyday ideas concerning the use of Container Queries. 
-
-Check out or give feedback on Container Queries conversation at the CSS Working Group issues project on GitHub or share your examples and experiments by opening a PR in the Awesome Container Queries repository.
--->
-
----
 layout: center
 ---
 
@@ -1216,67 +1112,15 @@ layout: center
 
   <h1 class="text-15xl">Share</h1>
 
-  <div class="flex align-center gap-2 justify-center">
-    <mdi-mastodon class="mt-1" />
-    <a href="https://twitter.com/mrtnvh" target="_blank" rel="noopener">mrtnvh@techhub.social</a>
+  <div class="flex align-center gap-2 justify-center text-2xl">
+    <mdi-globe class="mt-1" />
+    <a href="https://mrtnvh.com" target="_blank" rel="noopener">mrtnvh.com</a>
   </div>
 
 </div>
 
 <!-- 
 I do hope I've managed to get you all siked for the future of CSS. Go play with container queries and do share your experiments with me. You can find me on twitter @mrtnvh. I would love to see them, and I will personally share each and every one of them. 
--->
-
----
-layout: center
----
-
-<div class="text-center text-3xl">
-
-  [mrtnvh.com](https://mrtnvh.com)
-
-</div>
-
-<!--
-mrtnvh.com is the place I write stuff on and where I’ll the slides with links are available on. 
-
-You know what’s also available? 
--->
-
----
-layout: center
----
-
-<div class="flex flex-col items-center justify-center h-full text-center text-2xl">
-  <a href="https://iodigital.com" class="mb-4" target="_blank" rel="nofollow noopener">
-    <img
-      class="h-36"
-      src="/images/io-logo.svg"
-    />
-  </a>
-  
-  [iodigital.com](https://iodigital.com)
-
-</div>
-
-<!-- 
-Job opportunities at today’s sponsor, iO.
--->
-
-
----
-layout: center
----
-
-<h1 class="text-18xl">CSS</h1>
-
-<!-- 
-Just kidding, have to keep marketing on our good side, don't we?
-
-To close off my talk, one more time, let's shout it all together.
-
-1, 2, 3
-C - S -S
 -->
 
 ---
