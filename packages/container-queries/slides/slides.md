@@ -402,11 +402,11 @@ resizeObserver.observe($widget);
 ```
 
 <div v-click class='mt-3'>
-  <carbon-warning-alt class='mr-3' /> Flash Of Unstyled Content
+  <carbon-warning-alt class='mr-3' /> Layout shift
 </div>
 
 <!--
-Or we could use ResizeObserver API, a browser API that through JavaScript can take an elements size into account and act accordingly. But, with this solution, we have to wait until the JavaScript is evaluated. Without the proper measures, like some form of loading screen and making sure this solution is loaded before every other piece of JavaScript is ready, it can cause a Flash of Unstyled Content.
+Or we could use ResizeObserver API, a browser API that through JavaScript can take an elements size into account and act accordingly. But, with this solution, we have to wait until the JavaScript is evaluated. Without the proper measures, like some form of loading screen and making sure this solution is loaded before every other piece of JavaScript is ready, it can cause a Layout shift.
  -->
 
 ---
@@ -421,7 +421,7 @@ layout: center
 />
 
   <div class="-mt-24 mb-24">
-    Flash Of Unstyled Content - 1 - Empty
+    Layout shift - 1 - Empty
   </div>
 </div>
 
@@ -443,7 +443,7 @@ layout: center
 />
 
   <div class="-mt-24 mb-24">
-    Flash Of Unstyled Content - 2 - CSS ready
+    Layout shift - 2 - CSS ready
   </div>
 </div>
 
@@ -465,7 +465,7 @@ layout: center
 />
 
   <div class="-mt-24 mb-24">
-    Flash Of Unstyled Content - 3 - JS ready
+    Layout shift - 3 - JS ready
   </div>
 </div>
 
@@ -1093,7 +1093,7 @@ layout: center
 Let's bring this to a close, shall we? What did we learn today?
 With container queries, we can encapsulate adaptive styling in elements. It's the optimal solution for responsive component-based architectures, like design systems and component libraries. 
 
-Size container queries and container relative units are available today in Chrome 105, Edge 105 and Safari 16. And there is a polyfill available, but keep in mind that this could lead to a Flash of unstyled Content when using SSR or Static Site Generation.
+Size container queries and container relative units are available today in Chrome 105, Edge 105 and Safari 16. And there is a polyfill available, but keep in mind that this could lead to a Layout shift when using SSR or Static Site Generation.
 
 The Container Queries umbrella is not limited to only querying dimensions. Querying computed styles, certain element states, and several more features, are in under discussion with CSS Working Group.
 -->
