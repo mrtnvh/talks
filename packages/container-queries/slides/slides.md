@@ -73,15 +73,7 @@ Typically, the question we have as developers is how to optimize responsive styl
 layout: center
 ---
 <div class="text-center">
-  <h1 class="text-9xl">Expert<span style="color: #ED7F53;">?</span></h1>
-</div>
-
-
----
-layout: center
----
-<div class="text-center">
-  <h1 class="text-9xl">Exper<span style="color: #ED7F53;">imen</span>t<span style="color: #ED7F53;">!</span></h1>
+  <h1 class="text-15xl">Share</h1>
 </div>
 
 ---
