@@ -9,7 +9,7 @@
     "@iconify-json/logos": "^1.0.4",
     "@iconify-json/mdi": "^1.0.13",
     "@slidev/cli": "^0.28.2",
-    "slidev-theme-mrtnvh": "0.3.0"
+    "slidev-theme-mrtnvh": "0.5.1"
   },
   "devDependencies": {
     "playwright-chromium": "^1.18.1"

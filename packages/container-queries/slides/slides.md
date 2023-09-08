@@ -756,6 +756,22 @@ Containment always has to be set on an ancestor, in order for container queries 
 layout: browser
 ---
 
+<h1 class="m-0">Size container queries</h1>
+<p class="mt-2">Containment always has to be set on an ancestor, because of the <strong>normal flow</strong>.</p>
+
+<div class="browser-wrapper">
+    <div class="browser-body">
+        <iframe src="https://codepen.io/mrtnvh/full/LYMxqwb?default-tab=css%2Cresult&theme-id=dark" />
+    </div>
+</div>
+
+<small>Credits: <a href="https://slides.oddbird.net/demos/normal-flow/">Normal Flow</a> by <a href="https://oddbird.net">Miriam Suzanne</a></small>
+
+
+---
+layout: browser
+---
+
 <div class="browser-wrapper">
     <div class="browser-body">
         <iframe src="https://codepen.io/shadeed/full/poRLxvO" />
