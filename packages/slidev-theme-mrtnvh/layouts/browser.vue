@@ -8,6 +8,9 @@
 .slidev-layout.browser {
     position: relative;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
 }
 
 .browser-wrapper {
@@ -15,14 +18,9 @@
     flex-direction: column;
     flex-grow: 1;
     border: 3px solid #222;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: calc(100% - 3rem);
-    width: calc(100% - 3rem);
     resize: horizontal;
     overflow: auto;
+    flex-grow: 1;
 }
 
 .browser-body {
