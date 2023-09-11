@@ -972,6 +972,8 @@ layout: browser
 </div>
 
 ---
+layout: browser
+---
 
 <div class="browser-wrapper">
     <div class="browser-body">
