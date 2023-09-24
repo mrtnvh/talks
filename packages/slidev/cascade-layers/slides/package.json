@@ -1,0 +1,15 @@
+{
+  "name": "@mrtnvh/talks-io-summer-meetup-jun-22-slides",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "slidev-theme-mrtnvh": "*"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.18.1"
+  }
+}

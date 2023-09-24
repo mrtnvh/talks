@@ -1,0 +1,10 @@
+{
+  "name": "@mrtnvh/talks-a-technical-look-at-openapi-demo",
+  "private": true,
+  "scripts": {
+    "dev": "lerna run --parallel dev"
+  },
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}

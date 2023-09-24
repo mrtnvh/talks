@@ -1,0 +1,16 @@
+{
+  "name": "@mrtnvh/talks-guru-talks-feb-22-slides",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.43.5",
+    "slidev-theme-mrtnvh": "*"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.18.1"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "@mrtnvh/talks-frontend-loves-openapi-slides",
+  "version": "1.0.0-alpha",
+  "description": "Presentation from @mrtnvh about OpenAPI",
+  "scripts": {
+    "dev": "npm run start",
+    "test": "grunt test",
+    "start": "grunt serve",
+    "build": "grunt"
+  },
+  "author": {
+    "name": "Maarten Van Hoof",
+    "email": "info@mrtnvh.com",
+    "web": "https://mrtnvh.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vanhoofmaarten/talks"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "devDependencies": {
+    "express": "^4.17.1",
+    "grunt": "^1.3.0",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-cli": "^1.4.1",
+    "grunt-compile-handlebars": "^2.0.2",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-connect": "^3.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-contrib-jshint": "^3.0.0",
+    "grunt-contrib-qunit": "^4.0.0",
+    "grunt-contrib-uglify": "^5.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^3.1.0",
+    "grunt-zip": "^0.18.2",
+    "handlebars-layouts": "^3.1.4",
+    "highlight.js": "^10.7.1",
+    "load-grunt-tasks": "^5.1.0",
+    "mustache": "^4.1.0",
+    "node-sass": "^5.0.0",
+    "socket.io": "^4.0.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "reveal.js": "git+https://github.com/hakimel/reveal.js.git#3.9.2"
+  }
+}

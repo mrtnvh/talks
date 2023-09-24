@@ -5,6 +5,7 @@
     "lerna": "^5.1.4"
   },
   "workspaces": [
-    "packages/*"
+    "packages/slidev/**",
+    "packages/themes/**"
   ]
 }
