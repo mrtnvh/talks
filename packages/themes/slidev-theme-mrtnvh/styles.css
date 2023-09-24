@@ -21,6 +21,7 @@ html {
     font-family: "Inter", sans-serif;
     @apply antialiased;
 }
+
 html.light {
     --mrtnvh-background: #fafaf9;
     --accents-1: #f5f5f4;
