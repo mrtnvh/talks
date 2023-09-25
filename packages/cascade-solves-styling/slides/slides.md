@@ -11,7 +11,7 @@ fonts:
   mono: "IBM Plex Mono"
 
 # the image source
-background: ./images/distinct-mind-Js9auX5_9R8-unsplash-edited.jpg
+background: ./images/cascade-solves-styling-intro.jpg
 backgroundCredits: 'Original photo by Distinct Mind on Unsplash (https://unsplash.com/photos/Js9auX5_9R8)'
 ---
 
