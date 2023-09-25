@@ -271,8 +271,6 @@ h1 {}
 
 [data-reset] {}
 
-:where(.component) {}
-
 * {}
 ```
 
@@ -423,7 +421,7 @@ background: ./images/patrick-thinking.png
 <!--
 That's why we sought ways to make things easier for ourselves and newcomers.
 
-How did we try to circumvent the complexity? Over the years, we've tried many things, such as ensuring our CSS is correctly structured and keeping selector specificity low.
+How did we try to circumvent the complexity? Over the years, we've tried many things.
 -->
 
 ---
@@ -453,9 +451,9 @@ layout: code
 ```css
 /* BEM */
 
-.component {}
-.component__descendent {}
-.component--modifier {}
+.block {}
+.block__element {}
+.block--modifier {}
 ```
 
 <style>
@@ -1311,6 +1309,8 @@ We now have the unique moment to rethink how we write and architecture CSS, with
 ---
 layout: black
 ---
+
+.
 
 <!--
 Understanding what's under the hood of your abstraction will make you transcend into a better developer. It will make you resilient for what the future of our craft will bring.
