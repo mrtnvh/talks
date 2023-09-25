@@ -90,8 +90,53 @@ background: ./images/cascade-element-attached.svg
 ---
 
 ---
+layout: code
+---
 
-code example element attached
+```html
+<h1 style="font-size: 6rem;">
+  Heading
+</h1>
+```
+
+<style>
+  .slidev-layout.code {
+    align-items: center;
+
+    pre code {
+      font-size: 2rem;
+      line-height: 1.5;
+    }
+  }
+</style>
+
+---
+layout: code
+---
+
+```html
+<h1 style="font-size: 6rem;">
+  Heading
+</h1>
+
+<!-- Does not equal -->
+
+<h1 class="text-18xl">
+  Heading
+</h1>
+
+```
+
+<style>
+  .slidev-layout.code {
+    align-items: center;
+
+    pre code {
+      font-size: 2rem;
+      line-height: 1.5;
+    }
+  }
+</style>
 
 ---
 layout: cover
@@ -99,7 +144,7 @@ background: ./images/cascade-selector-specificity.svg
 ---
 
 ---
-layout: center
+layout: code
 ---
 
 ```css
@@ -119,6 +164,17 @@ h1 {}
 
 * {}
 ```
+
+<style>
+  .slidev-layout.code {
+    align-items: center;
+
+    pre code {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+  }
+</style>
 
 ---
 layout: center
@@ -153,10 +209,8 @@ background: ./images/cascade-order-of-appearance.svg
 ---
 
 ---
-layout: center
+layout: code
 ---
-
-# Order of appearance
 
 ```css
 a {
@@ -171,6 +225,17 @@ a {
   color: peachpuff;
 }
 ```
+
+<style>
+  .slidev-layout.code {
+    align-items: center;
+
+    pre code {
+      font-size: 1.5rem;
+      line-height: 1.5;
+    }
+  }
+</style>
 
 ---
 layout: cover
