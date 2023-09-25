@@ -1,0 +1,15 @@
+{
+  "name": "@mrtnvh/talks-cascade-solves-styling-slides",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@iconify-json/mdi": "^1.1.54",
+    "@iconify-json/logos": "^1.0.4",
+    "@slidev/cli": "^0.28.2",
+    "slidev-theme-mrtnvh": "0.5.1"
+  }
+}
