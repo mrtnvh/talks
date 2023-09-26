@@ -49,14 +49,14 @@ layout: black
 
 .
 
-<!-- 
+<!--
 As front-end developers, it's our duty to build beautiful UIs and create the most user-friendly experience possible within the given constraints. Time constraints by our team members in operations. Technical limitations by the history of the code.
 
 With abstractions, we aim to make complexity more manageable within those constraints.
 
 Abstractions are a great way to tailor code to the most common usage. One could create or generate a RESTful API client because who wants to handwrite lengthy fetch requests day in day out? That's one of the reasons why abstractions exist.
 
-But due to the stress of the constraints, our community often takes a popular opinion for truth without actually thinking or trying the thing that is under the hood.
+But due to constant stress of those constraints, our community often takes a popular opinion for truth, and we eventually forget what's under the hood.
 
 And more so is the case with CSS.
 -->
@@ -93,7 +93,9 @@ layout: center
   <h1 class="text-9xl">Abstractions</h1>
 </div>
 
-<!-- We try to ease those harsh feelings with abstractions. They try to create something graspable for the ones for whom the underlying layer is too complex. -->
+<!--
+delete
+-->
 
 ---
 layout: center
@@ -121,8 +123,12 @@ background: ./images/io-roles.svg
 
 .
 
-<!-- 
-I am a Lead Front-end Developer and Developer Advocate at iO in Eindhoven in the Netherlands. For the next 30 minutes, I am here to take you through some of the struggles we've had and still have with CSS, but also share the new possibilities in browsers now and in development to ease our pain. All this is to send y'all home with a spark to rethink how you write CSS in the future. Let me point out the biggest problem developers have with CSS. Or better said, the thing that developers struggle to understand.
+<!--
+I am a Lead Front-end Developer and Developer Advocate at iO in Eindhoven in the Netherlands. 
+
+For the next 30 minutes, I am here to take you through some of the struggles we've had and still have with CSS, but also share the new possibilities in browsers now and in development to ease our pain. All this is to send y'all home with a spark to rethink how you write CSS in the future. 
+
+Let me point out the biggest problem developers have with CSS. Or better said, the thing that developers struggle to understand.
 -->
 
 ---
@@ -1299,7 +1305,7 @@ background: ./images/golden-era-css.jpg
 <!--
 Una Kravets said it perfectly in her talk at CSSday 2023: We are now experiencing the golden age of Web UI. We have seen so many new features land over the course of the last years.
 
-Standard committees, like the CSS working group, are welcoming more and more community contributors. Browser vendors are working together to their best abilities to launch new features in the same time frame as one another, like the yearly Interop effort. And everyone working on the Web is finally listening more and more to the needs of our community.
+Standard committees, like the CSS working group, are welcoming more and more community contributors. Browser vendors are working together to their best abilities to launch new features at the same time as one another, like the yearly Interop effort. And everyone working on the Web is finally listening more and more to the needs of our community.
 
 We now have the momentum to do away with the established ways of working and start anew. 
 
@@ -1325,7 +1331,7 @@ layout: black
 ---
 
 <video controls>
-  <source src="/videos/unlimited-power_1.mp4" type="video/mp4">
+  <source src="/videos/maximum power_1.mp4" type="video/mp4">
 </video>
 
 <style>
