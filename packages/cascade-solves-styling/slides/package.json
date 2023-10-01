@@ -7,9 +7,9 @@
     "export": "slidev export"
   },
   "dependencies": {
+    "@iconify-json/logos": "^1.1.37",
     "@iconify-json/mdi": "^1.1.54",
-    "@iconify-json/logos": "^1.0.4",
-    "@slidev/cli": "^0.28.2",
+    "@slidev/cli": "^0.43.6",
     "slidev-theme-mrtnvh": "0.5.1"
   }
 }

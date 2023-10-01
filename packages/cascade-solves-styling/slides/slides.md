@@ -5,21 +5,28 @@ theme: mrtnvh
 routerMode: 'hash'
 layout: cover
 
+css: windicss
+
 fonts:
   sans: Inter Tight
   weights: '400,700,800'
   mono: "IBM Plex Mono"
 
 # the image source
-background: ./images/cascade-solves-styling-intro.jpg
-backgroundCredits: 'Original photo by Distinct Mind on Unsplash (https://unsplash.com/photos/Js9auX5_9R8)'
+background: ./images/underwater-cascades-edit.jpg
 ---
 
 ---
 layout: center
 ---
 
-<h1 class="text-15xl text-center">CSS</h1>
+<h1 class="text-center">CSS</h1>
+
+<style>
+  h1 {
+    font-size: 18rem;
+  }
+</style>
 
 <!-- Have you written any CSS lately? -->
 
@@ -38,6 +45,12 @@ layout: center
 ---
 
 <h1 class="text-12xl text-center">Expert</h1>
+
+<style>
+  h1 {
+    font-size: 12rem;
+  }
+</style>
 
 <!--
 Would you consider yourself an expert in CSS? Or rather, an expert in an abstraction?
@@ -63,8 +76,7 @@ And more so is the case with CSS.
 
 ---
 layout: cover
-background: ./images/photo-1511936606692-5e0d73f6b638.avif
-backgroundCredits: 'Original photo by Nathan Ziemanski on Unsplash (https://unsplash.com/photos/hjW4o5XfCzc)'
+background: ./images/island-spongebob.png
 ---
 
 .
@@ -75,26 +87,13 @@ To some, CSS is the most beautiful language they have ever written, like a gentl
 
 ---
 layout: cover
-background: ./images/photo-1619266465172-02a857c3556d.avif
-backgroundCredits: 'Original photo by Tetiana Grypachevska on Unsplash (https://unsplash.com/photos/80x3QULJDN4)'
+background: ./images/squidward-hell.gif
 ---
 
 .
 
 <!--
 To others, CSS is the bane of their existence. An impossible game of whack-a-mole where changing one thing inevitably leads to unwanted side effects on totally unrelated places.
--->
-
----
-layout: center
----
-
-<div class="text-center">
-  <h1 class="text-9xl">Abstractions</h1>
-</div>
-
-<!--
-delete
 -->
 
 ---
@@ -414,6 +413,8 @@ background: ./images/spongebob-anxious.gif
 <!--
 Not really. If you are unfamiliar with the cascade, you might feel uncomfortable, perhaps a bit anxious. 
 
+[Jeremy Keith imperative/declarative quote]
+
 We now better understand why this is a significant problem developers have with CSS. It is complex for the ones not familiar with it. It's vastly different compared to other programming languages.
 -->
 
@@ -431,142 +432,19 @@ How did we try to circumvent the complexity? Over the years, we've tried many th
 -->
 
 ---
-layout: center
+layout: cover
+background: ./images/abstractions.svg
 ---
 
-<h1 class="text-9xl text-center">OOCSS</h1>
+.
 
 <!--
-Concepts like OOCSS, Object Oriented CSS, or
--->
-
----
-layout: center
----
-
-<h1 class="text-9xl text-center">SMACSS</h1>
-
-<!--
-or SMACSS made us think about organising our CSS
--->
-
----
-layout: code
----
-
-```css
-/* BEM */
-
-.block {}
-.block__element {}
-.block--modifier {}
-```
-
-<style>
-  .slidev-layout.code {
-    align-items: center;
-
-    pre code {
-      font-size: 1.5rem;
-      line-height: 1.5;
-    }
-  }
-</style>
-
-<!--
-naming conventions like BEM
--->
-
----
-layout: code
----
-
-```css
-/* SUITCSS */
-
-.MyComponent {}
-.MyComponent--modifier {}
-.MyComponent-descendent {}
-.MyComponent.is-state {}
-```
-
-<style>
-  .slidev-layout.code {
-    align-items: center;
-
-    pre code {
-      font-size: 1.5rem;
-      line-height: 1.5;
-    }
-  }
-</style>
-
-<!--
-or SUITCSS tried to make sure we didn't have any naming collisions.
+Concepts like OOCSS, Object Oriented CSS, or SMACSS made us think about organising our CSS. Naming conventions like BEM or SUITCSS tried to make sure we didn't have any naming collisions.
 
 They advocated using clear, unambiguous naming, just like in every other possible programming language. They try to avoid complex and lengthy selectors with too much specificity.
--->
 
----
-layout: code
----
-
-```css
-/* CSS Modules */
-.3j5Qdsdfi39 {
-  color: red;
-}
-
-/* Vue */
-[data-v-2259250b].card {
-  font-family: fantasy;
-}
-
-/* Astro */
-.layout:where(.astro-5HCE7SGA) {
-  color: rebeccapurple;
-}
-```
-
-<style>
-  .slidev-layout.code {
-    align-items: center;
-
-    pre code {
-    font-size: 1.25rem;
-    line-height: 1.5;
-    }
-  }
-</style>
-
-<!--
 CSS Modules or build time scoping, like the ones built into Vue or Astro, give you local scoping of CSS rules and try to keep the specificity within a module by adding a random class to all selectors.
--->
 
----
-layout: code
----
-
-```html
-<!-- Tailwind -->
-<div class="flex items-center space-x-2 text-base">
-  <h4 class="font-semibold text-slate-900">Contributors</h4>
-  <span class="rounded-full bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-700">204</span>
-</div>
-```
-
-<style>
-  .slidev-layout.code {
-    align-items: center;
-
-    pre code {
-    font-size: 1.5rem;
-    line-height: 1.5;
-    }
-  }
-</style>
-
-<!--
 With atomic classes or utility classes, like Tailwind or UnoCSS, we do away with trying to come up with names entirely and compose our styling in the DOM. Pretty much each selector in these libraries corresponds to a single CSS rule.
 -->
 
@@ -574,11 +452,17 @@ With atomic classes or utility classes, like Tailwind or UnoCSS, we do away with
 layout: center
 ---
 
-<h1 class="text-7xl text-center">Keep specificity <span style="color:#0065ff">low</span></h1>
+<h1 class="text-7xl text-center">CSS couldn't keep up</h1>
 
 <!--
-Regardless of your preferred solution, you might've noticed a pattern here. All of these methodologies are based on keeping specificity low. Pretty straightforward, right
+Regardless of your preferred solution, you might've noticed a pattern here. All of these methodologies are based on the fact that CSS could not keep up with the demands of the web ecosystem.
 -->
+
+---
+layout: center
+---
+
+<h1 class="text-7xl text-center line-through">CSS couldn't keep up</h1>
 
 ---
 layout: cover
@@ -599,6 +483,27 @@ background: ./images/cascade-is-where.svg
 <!--
 We saw the introduction of the ':is' and ':where' pseudo-classes. Both allow us to finally easily use a list of selectors.
 -->
+
+---
+layout: code
+---
+
+```css
+button:hover:disabled,
+button:focus-visible:disabled, 
+button:active:disabled {}
+```
+
+<style>
+  .slidev-layout.code {
+    align-items: center;
+
+    pre code {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    }
+  }
+</style>
 
 ---
 layout: code
@@ -628,33 +533,6 @@ For instance, we see two examples here.
 -->
 
 ---
-layout: code
----
-
-```css
-/* 1,1,1 */
-button:is(#action, :hover):disabled {}
-
-/* 0,1,1 */
-button:where(#action, :hover):disabled {}
-```
-
-<style>
-  .slidev-layout.code {
-    align-items: center;
-
-    pre code {
-    font-size: 1.5rem;
-    line-height: 1.5;
-    }
-  }
-</style>
-
-<!--
-Difference between :is and :where
--->
-
----
 layout: cover
 background: ./images/cascade-cascade-layers.svg
 ---
@@ -670,19 +548,78 @@ Since the 14th of March 2022, all major browsers have supported a new part of th
 layout: code
 ---
 
+```html
+<section class="flex card table">
+  What color do I have?
+</section>
+
+<!-- khaki -->
+```
+
 ```css
-.table { table-layout: fixed; }
+.table {
+  color: crimson;
+}
+
+section {
+  color: cornflowerblue;
+}
+
+.card {
+  color: deeppink;
+}
+
+.flex {
+  color: khaki;
+}
+```
+
+<style>
+  .slidev-layout.code {
+    align-items: center;
+
+    pre code {
+    font-size: .9rem;
+    line-height: 1.5;
+    }
+  }
+</style>
+
+---
+layout: code
+---
+
+```html
+<section class="flex card table">
+  What color do I have?
+</section>
+
+<!-- khaki -->
+```
+
+```css
+@layer table {
+  .table {
+    color: crimson;
+  }
+}
 
 @layer reset {
-  body { font-family: serif; }
+  section {
+    color: cornflowerblue;
+  }
 }
 
 @layer components {
-  .card { background-color: white; }
+  .card {
+    color: deeppink;
+  }
 }
 
 @layer utility {
-  .flex { display: flex; }
+  .flex {
+    color: khaki;
+  }
 }
 
 ```
@@ -692,7 +629,7 @@ layout: code
     align-items: center;
 
     pre code {
-    font-size: 1.2rem;
+    font-size: .9rem;
     line-height: 1.5;
     }
   }
@@ -703,41 +640,6 @@ It allows you to define a layer for your CSS rules. This layer is then used to d
 
 For instance, we can define a reset layer that contains all our reset rules. Next, we can define a base layer containing all our base styling. And lastly, we can define a components layer with all our component styling.
 -->
-
----
-layout: code
----
-
-```css
-/* Unlayered: Highest priority */
-.table { table-layout: fixed; }
-
-/* Lowest priority */
-@layer reset {
-  body { font-family: serif; }
-}
-
-/* 3rd highest priority */
-@layer components {
-  .card { background-color: white; }
-}
-
-/* 2nd highest priority */
-@layer utility {
-  .flex { display: flex; }
-}
-```
-
-<style>
-  .slidev-layout.code {
-    align-items: center;
-
-    pre code {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    }
-  }
-</style>
 
 <!--
 Without defining the order of the layers, each layer's priority is determined by the order in which they appear in the CSS file, just like the order of appearance. All unlayered rules will have the highest priority to ensure backwards compatibility.
@@ -751,7 +653,7 @@ layout: code
 ---
 
 ```css
-@layer reset, components, utility;
+@layer table, reset, components, utility;
 ```
 
 <style>
@@ -774,7 +676,7 @@ layout: code
 ---
 
 ```css
-@layer utility, reset, components;
+@layer utility, reset, table, components;
 ```
 
 <style>
@@ -796,25 +698,39 @@ For instance, we can declare that the components layer has the highest priority,
 layout: code
 ---
 
+```html
+<section class="flex card table">
+  What color do I have?
+</section>
+
+<!-- cornflowerblue -->
+```
+
 ```css
-@layer utility, components, reset;
+@layer utility, table, components, reset;
 
-/* Unlayered: Highest priority */
-.table { table-layout: fixed; }
+@layer table {
+  .table {
+    color: crimson;
+  }
+}
 
-/* 2nd highest priority */
 @layer reset {
-  body { font-family: serif; }
+  section {
+    color: cornflowerblue;
+  }
 }
 
-/* 3rd highest priority */
 @layer components {
-  .card { background-color: white; }
+  .card {
+    color: deeppink;
+  }
 }
 
-/* Lowest priority */
 @layer utility {
-  .flex { display: flex; }
+  .flex {
+    color: khaki;
+  }
 }
 ```
 
@@ -823,7 +739,79 @@ layout: code
     align-items: center;
 
     pre code {
-    font-size: 1.05rem;
+    font-size: .8rem;
+    line-height: 1.5;
+    }
+  }
+</style>
+
+<!--
+This means that Cascade Layers enable us to no longer to look at the order of loading.
+-->
+
+---
+layout: code
+---
+
+```html
+<section class="flex card table">
+  What color do I have?
+</section>
+
+<!-- The one from the reset file / layer -->
+```
+
+```css
+@layer utility, table, components, reset;
+
+@import ("/styles/table.css") layer(table);
+@import ("/styles/reset.css") layer(reset);
+@import ("/styles/components.css") layer(components);
+@import ("/styles/utility.css") layer(utility);
+```
+
+<style>
+  .slidev-layout.code {
+    align-items: center;
+
+    pre code {
+    font-size: .8rem;
+    line-height: 1.5;
+    }
+  }
+</style>
+
+---
+layout: code
+---
+
+```html
+<section class="flex card table">
+  What color do I have?
+</section>
+
+<!-- forestgreen -->
+```
+
+```css
+@layer utility, table, components, reset;
+
+section {
+  color: forestgreen;
+}
+
+@import ("/styles/table.css") layer(table);
+@import ("/styles/reset.css") layer(reset);
+@import ("/styles/components.css") layer(components);
+@import ("/styles/utility.css") layer(utility);
+```
+
+<style>
+  .slidev-layout.code {
+    align-items: center;
+
+    pre code {
+    font-size: .8rem;
     line-height: 1.5;
     }
   }
@@ -857,30 +845,51 @@ layout: center
 
 <h1 class="text-8xl text-center">Web Components</h1>
 
-<!--
-Web Components, or more specifically, the Shadow DOM, which is one of the aspects of using Web Components.
--->
-
 ---
 layout: center
 ---
 
-<h1 class="text-8xl text-center line-through">Web Components</h1>
-
-<!--
-But I am not going to talk about Web Components today, because that's a separate talk just by itself.
--->
+<img src="/images/shadowdom.svg" style="height: 30rem;" />
 
 ---
-layout: cover
-background: ./images/lucien.jpg
+layout: browser
 ---
 
-.
+<div class="browser-wrapper">
+    <div class="browser-body">
+        <iframe src="https://codepen.io/mrtnvh/embed/jOXppav?default-tab=html%2Cresult&theme-id=dark" style="width: 125%;height: 125%;transform: translate(-10%, -10%) scale(0.80);" />
+    </div>
+</div>
 
-<!--
-If you want to hear more about Web Components, do drink enough coffee and stay for Lucien's LIT is 🔥 talk.
--->
+<style>
+  .browser {
+    padding: 0rem;
+  }
+
+  .browser-wrapper {
+    border: 0;
+  }
+</style>
+
+---
+layout: browser
+---
+
+<div class="browser-wrapper">
+    <div class="browser-body">
+        <iframe src="https://codepen.io/mrtnvh/embed/mdajjoq?default-tab=html%2Cresult&theme-id=dark" style="width: 125%;height: 125%;transform: translate(-10%, -10%) scale(0.80);" />
+    </div>
+</div>
+
+<style>
+  .browser {
+    padding: 0rem;
+  }
+
+  .browser-wrapper {
+    border: 0;
+  }
+</style>
 
 ---
 layout: center
@@ -919,97 +928,10 @@ background: ./images/cascade-scope.svg
 
 <!--
 The final thing I want to share with you today is CSS scoping. Actual scoped CSS as a standard.
--->
-
----
-layout: code
----
-
-```html
-<div>
-  <style scoped>
-    .table { table-layout: fixed; }
-  </style>
-
-  <!-- Fixed table-layout -->
-  <table class="table"></table>
-</div>
-
-<!-- No fixed table-layout -->
-<table class="table"></table>
-```
-
-<style>
-  .slidev-layout.code {
-    align-items: center;
-
-    pre code {
-      font-size: 1.5rem;
-      line-height: 1.5;
-    }
-  }
-</style>
-
-<!--
-There already was an original proposal for scoped styles. This was a feature in Firefox 21-54,
--->
-
----
-layout: code
----
-
-```html
-<div>
-  <style scoped>
-    .table { table-layout: fixed; }
-  </style>
-
-  <!-- Fixed table-layout -->
-  <table class="table"></table>
-</div>
-
-<!-- No fixed table-layout -->
-<table class="table"></table>
-```
-
-<style>
-  .slidev-layout.code {
-    align-items: center;
-
-    pre code {
-      font-size: 1.5rem;
-      line-height: 1.5;
-      text-decoration: line-through;
-    }
-  }
-</style>
-
-<!-- but it was removed due to a lack of interest by other browser vendors and it got removed from the spec. -->
-
----
-layout: cover
-background: ./images/neuralyzer.jpeg
----
-
-.
-
-<!-- So let's forget the last 2 slides -->
-
----
-layout: cover
-background: ./images/cascade-scope.svg
----
-
-.
-
-<!-- End of story. Right? Wrong.
-
-Scoped CSS is dead; long live scoped CSS! 
 
 The CSS working group is hashing out a new CSS at-rule, the @scope rule
 
 Let's dive right in.
-
 -->
 
 ---
@@ -1330,9 +1252,9 @@ In the end, understanding the cascade, inheritance, and specificity will give yo
 layout: black
 ---
 
-<video controls>
-  <source src="/videos/maximum power_1.mp4" type="video/mp4">
-</video>
+<SlidevVideo autoPlay="resume" autoReset="slide"  controls>
+  <source src="/videos/maximum_power_1.mp4" type="video/mp4">
+</SlidevVideo>
 
 <style>
   video {
@@ -1347,7 +1269,13 @@ layout: black
 layout: center
 ---
 
-<h1 class="text-15xl text-center">✌️</h1>
+<h1 class="text-center">✌️</h1>
+
+<style>
+  h1 {
+    font-size: 15rem;
+  }
+</style>
 
 <!--
 Thank you!
